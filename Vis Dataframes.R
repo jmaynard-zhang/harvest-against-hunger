@@ -8,6 +8,7 @@ library(zoo)
 library(rlist)
 library(data.table)
 library(stringr)
+library(stringi)
 
 
 # -- Load data --
@@ -176,47 +177,55 @@ for (i in 1:length(list)) {
 }
 
 
-# -- Testing purposes --
-## Add together pounds purchased (remove all non-numeric characters and add
-## remaining numbers; there will be some errors, but it's the best solution)
+# -- Merge --
+df <- rbindlist(list)
+
+
+# -- Fixing `Pounds purchased` --
+## Temporary solution: just take the first number in each cell.
+## Eventually... Add together pounds purchased (remove all non-numeric
+## characters and add remaining numbers; there will be some errors, but it's
+## the best solution).
 # 1. Remove unnecessary numbers by removing everything after the '=', '(', and
 # '$' signs (uninclusive).
 remove <- "\\(.*|=.*|\\$.*| +$"
 fix_pp <- df
-fix_pp$`Pounds purchased` <- fix_pp %>%
-  select(`Pounds purchased`) %>%
-  apply(2, gsub, pattern=remove, replacement = "")
+# Without mutate, not good practice
+# fix_pp$`Pounds purchased` <- fix_pp %>%
+#   select(`Pounds purchased`) %>%
+#   apply(2, gsub, pattern=remove, replacement = "")
 
+# The best way of doing things as far as I can find
 fix_pp <- fix_pp %>%
   mutate(`Pounds purchased`=gsub(pattern=remove,
-                                    replacement = "",
-                                    fix_pp$`Pounds purchased`))
+                                 replacement = "",
+                                 fix_pp$`Pounds purchased`))
 
-# 2. Extract numbers
+# Using transmute; not actually the solution I need
+# fix_pp <- fix_pp %>%
+#   transmute(`Pounds purchased`=gsub(pattern=remove,
+#                                  replacement = "",
+#                                  fix_pp$`Pounds purchased`), .keep = "unused")
+
+# 2. Extract numbers & add together
+# For every row in `Pounds purchased`
+# Extract numbers
+# Unlist and add together
+# fix_pp$`Pounds purchased` <- fix_pp %>%
+#   select(`Pounds purchased`) %>%
+#   apply(2, stri_extract_first_regex, "[0-9]+")
+
 fix_pp <- fix_pp %>%
-  select(`Pounds purchased`) %>%
-  mutate()
-# 3. Add numbers together
+  mutate(`Pounds purchased`=stri_extract_first_regex(`Pounds purchased`,
+                                                     "[0-9]+"))
+
+# gregexpr("[[:digit:]]+", fix_pp$`Pounds purchased`)
+
+
+# -- Testing purposes --
 # X19_vm <- X19_list[[1]]
 # X19_pom <- X19_list[[2]]
 # X20_h <- X20_list[[1]]
 # X20_jfs <- X20_list[[2]]
 # X19_vm <- list[[1]]
 # X20_mp <- list[[22]]
-
-
-# -- Merge --
-df <- rbindlist(list)
-
-# -- More fixes --
-## Add together pounds purchased (remove all non-numeric characters and add
-## remaining numbers; there will be some errors, but it's the best solution)
-# <- Replace all whitespace with a single plus sign
-# <- Remove all non-numeric characters
-# <- Add numbers together
-# <- Convert column to numeric data type
-
-# -- Line df --
-
-
-# -- Map df --
