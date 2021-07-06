@@ -12,9 +12,7 @@ library(stringi)
 
 
 # -- Load data --
-## KCFS Funds
-funds <- read_excel("./Datasets/KCFS $.xlsx")
-## KCFS 2019
+# KCFS 2019
 X19_list <- list()
 X19_programs <- excel_sheets(path="./Datasets/KCFS 2019.xlsx")
 sheets <- 3:length(X19_programs)
@@ -23,10 +21,11 @@ for (i in sheets) {
                      skip = 2,
                      sheet = X19_programs[i])
   temp$Program <- X19_programs[i]
-  temp$Year <- 2019
+  # temp$Year <- 2019
   X19_list[[i - 2]] <- temp
 }
-## KCFS 2020
+
+# KCFS 2020
 X20_list <- list()
 X20_programs <- excel_sheets(path="./Datasets/KCFS 2020.xlsx")
 sheets <- 2:length(X19_programs)
@@ -35,9 +34,25 @@ for (i in sheets) {
                      skip = 3,
                      sheet = X20_programs[i])
   temp$Program <- X20_programs[i]
-  temp$Year <- 2020
+  # temp$Year <- 2020
   X20_list[[i - 1]] <- temp
 }
+
+# CARES
+cares.list <- list()
+cares_programs <- excel_sheets(path="./Datasets/CARES.xlsx")
+sheets <- 2:length(cares_programs)
+for (i in sheets) {
+  temp <- read_excel("./Datasets/CARES.xlsx",
+                     skip = 1,
+                     sheet = cares_programs[i])
+  temp$Program <- cares_programs[i]
+  # temp$Year <- 2020
+  cares.list[[i - 1]] <- temp
+}
+
+# KCFS Funds
+funds <- read_excel("./Datasets/KCFS $.xlsx")
 
 
 # -- Select & Filter --
@@ -45,13 +60,15 @@ for (i in sheets) {
 X19_list <- X19_list %>%
   lapply(rename, `Order Date` = `Contract Date`)
 list <- append(X19_list, X20_list)
+list <- append(list, cares.list)
 ## Select relevant columns
 list <- list %>%
   lapply(select, `Farm Name`,
          `Order Date`,
          `Pounds purchased`,
-         `Program`,
-         `Year`)
+         `Program`#,
+         # `Year`
+         )
 ## Filter out "Totals"
 list <- list %>%
   lapply(subset, `Farm Name` != "Totals")
@@ -73,8 +90,11 @@ for (i in 1:length(list)) {
 }
 
 
-# -- Merge --
+# -- Merge lists --
 df <- rbindlist(list)
+df <- df %>%
+  # mutate(Year=as.Date(df$Year))
+  # mutate(Year=as.Date(ISOdate(df$Year, 1, 1)))
 
 
 # -- Fixing `Pounds purchased` --
@@ -90,16 +110,3 @@ df <- df %>%
 df <- df %>%
   mutate(`Pounds purchased`=stri_extract_first_regex(`Pounds purchased`,
                                                      "[0-9]+"))
-
-# Eventually... Add together pounds purchased (remove all non-numeric
-## characters and add remaining numbers; there will be some errors, but it's
-## the best solution).
-# 2. Extract numbers & add together
-  # For every row in `Pounds purchased`
-  # Extract numbers
-  # Unlist and add together
-# fix_pp$`Pounds purchased` <- fix_pp %>%
-#   select(`Pounds purchased`) %>%
-#   apply(2, stri_extract_first_regex, "[0-9]+")
-
-# gregexpr("[[:digit:]]+", fix_pp$`Pounds purchased`)
