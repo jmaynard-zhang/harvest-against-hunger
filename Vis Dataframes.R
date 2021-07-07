@@ -59,6 +59,24 @@ funds <- read_excel("./Datasets/KCFS $.xlsx")
 # Append lists
 X19_list <- X19_list %>%
   lapply(rename, `Order Date` = `Contract Date`)
+# X19_list <- X19_list %>%
+#   lapply(rename, `Order Amount` = `\r\nContract Amount`)
+x <- c()
+for (i in 1:length(X19_list)) {
+  temp_cols <- colnames(X19_list[[i]])
+  temp_df <- X19_list[[i]]
+
+  if ("Contract Amount" %in% temp_cols) {
+    X19_list[[i]] <- temp_df %>%
+    rename(`Order Amount ($)` = `Contract Amount`)
+  } else if ("\r\nContract Amount" %in% temp_cols) {
+    X19_list[[i]] <- temp_df %>%
+    rename(`Order Amount ($)` = `\r\nContract Amount`)
+  } else {
+    x <- append(x, i)
+  }
+}
+
 list <- append(X19_list, X20_list)
 list <- append(list, cares.list)
 ## Select relevant columns
@@ -66,8 +84,8 @@ list <- list %>%
   lapply(select, `Farm Name`,
          `Order Date`,
          `Pounds purchased`,
-         `Program`#,
-         # `Year`
+         `Program`,
+         `Order Amount ($)`
          )
 ## Filter out "Totals"
 list <- list %>%
@@ -92,7 +110,6 @@ for (i in 1:length(list)) {
 
 # -- Merge lists --
 df <- rbindlist(list)
-df <- df %>%
   # mutate(Year=as.Date(df$Year))
   # mutate(Year=as.Date(ISOdate(df$Year, 1, 1)))
 

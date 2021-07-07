@@ -24,7 +24,7 @@ farms_daily.line <- ggplot(data = farms_daily) +
   ) +
   labs(
     title = "Total Farms Served Daily",
-    x = "Year",
+    x = "Date",
     y = "Number of Farms" #* Get rid of decimal values
   )
 
@@ -51,30 +51,44 @@ farms_yearly.line <- ggplot(data = farms_yearly) +
 
 
 # -- Num orders --
-# num_orders <- df %>%
-#   select(`Order Date`, Year) %>%
-#   group_by(Year) %>%
-#   summarize(`Number of Orders` = n())
-#
-#
-# orders.line <- ggplot(data = numOrders) +
-#   geom_line(
-#     mapping = aes(x = Year, y = `Num Orders` , color = `Farm Name`),
-#     size = 2
-#   ) +
-#   scale_color_brewer(
-#     palette = "Set2",
-#     labels = `Farm Name`
-#   ) +
-#   labs(
-#     title = "Prison Population over Time (1980-2015)",
-#     x = "Year",
-#     y = "Number of Orders",
-#     color = "Farm"
-#   )
+# By day
+orders_daily <- df %>%
+  select(`Order Date`) %>%
+  group_by(`Order Date`) %>%
+  summarize(`Number of Orders` = n()) %>%
+  na.omit()
+
+orders_daily.line <- ggplot(data = orders_daily) +
+  geom_line(
+    mapping = aes(x = `Order Date`, y = `Number of Orders`),
+    size = 2
+  ) +
+  labs(
+    title = "Total Orders Daily",
+    x = "Date",
+    y = "Number of Orders"
+  )
 
 
 # -- Num programs --
+# By day
+programs_daily <- df %>%
+  select(`Program`, `Order Date`) %>%
+  unique() %>% #* There are some misspellings that makes this inaccurate
+  group_by(`Order Date`) %>%
+  summarize(`Number of Programs` = n()) %>%
+  na.omit()
+
+programs_daily.line <- ggplot(data = programs_daily) +
+  geom_line(
+    mapping = aes(x = `Order Date`, y = `Number of Programs`),
+    size = 2
+  ) +
+  labs(
+    title = "Total Program Partnerships Daily",
+    x = "Date",
+    y = "Number of Programs" #* Get rid of decimal values
+  )
 
 
 # -- Order amount ($) --
