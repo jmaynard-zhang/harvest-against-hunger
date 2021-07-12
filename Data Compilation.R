@@ -1,14 +1,7 @@
-# VISUALIZATION 1 - KCFS 2019-2021 Line Graph
+# DATA COMPILATION
 
 # -- Load packages --
-library(tidyverse)
-library(readxl)
-library(dplyr)
-library(zoo)
-library(rlist)
-library(data.table)
-library(stringr)
-library(stringi)
+load_pckg()
 
 
 # -- Load data --
@@ -127,3 +120,6 @@ df <- df %>%
 df <- df %>%
   mutate(`Pounds purchased`=stri_extract_first_regex(`Pounds purchased`,
                                                      "[0-9]+"))
+## Type char to num
+df <- df %>%
+  mutate(`Pounds purchased`=as.numeric(`Pounds purchased`))

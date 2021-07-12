@@ -1,22 +1,11 @@
-# VISUALIZATION 1 - KCFS 2019-2021 Line Graph
+# VISUALIZATION 1 - KCFS 2019-2021 Line Graphs
 
 # -- Load packages --
 library(ggplot2)
 library(RColorBrewer)
 
-
-# -- Load dataframes --
-
-
 # -- Num farms served --
 # By day
-farms_daily <- df %>%
-  select(`Farm Name`, `Order Date`) %>%
-  unique() %>% #* There are some misspellings that makes this inaccurate
-  group_by(`Order Date`) %>%
-  summarize(`Number of Farms` = n()) %>%
-  na.omit()
-
 farms_daily.line <- ggplot(data = farms_daily) +
   geom_line(
     mapping = aes(x = `Order Date`, y = `Number of Farms`),
@@ -31,13 +20,6 @@ farms_daily.line <- ggplot(data = farms_daily) +
 # By month
 
 # By year
-farms_yearly <- df %>%
-  select(`Farm Name`, `Order Date`) %>%
-  mutate(`Order Year`=as.integer(format(df$`Order Date`, format = "%Y"))) %>%
-  group_by(`Order Year`) %>%
-  summarize(`Number of Farms` = n()) %>%
-  na.omit()
-
 farms_yearly.line <- ggplot(data = farms_yearly) +
   geom_line(
     mapping = aes(x = `Order Year`, y = `Number of Farms`),
@@ -52,12 +34,6 @@ farms_yearly.line <- ggplot(data = farms_yearly) +
 
 # -- Num orders --
 # By day
-orders_daily <- df %>%
-  select(`Order Date`) %>%
-  group_by(`Order Date`) %>%
-  summarize(`Number of Orders` = n()) %>%
-  na.omit()
-
 orders_daily.line <- ggplot(data = orders_daily) +
   geom_line(
     mapping = aes(x = `Order Date`, y = `Number of Orders`),
@@ -72,13 +48,6 @@ orders_daily.line <- ggplot(data = orders_daily) +
 
 # -- Num programs --
 # By day
-programs_daily <- df %>%
-  select(`Program`, `Order Date`) %>%
-  unique() %>% #* There are some misspellings that makes this inaccurate
-  group_by(`Order Date`) %>%
-  summarize(`Number of Programs` = n()) %>%
-  na.omit()
-
 programs_daily.line <- ggplot(data = programs_daily) +
   geom_line(
     mapping = aes(x = `Order Date`, y = `Number of Programs`),
@@ -87,14 +56,34 @@ programs_daily.line <- ggplot(data = programs_daily) +
   labs(
     title = "Total Program Partnerships Daily",
     x = "Date",
-    y = "Number of Programs" #* Get rid of decimal values
+    y = "Number of Programs"
   )
 
 
 # -- Order amount ($) --
+dollars_daily.line <- ggplot(data = dollars_daily) +
+  geom_line(
+    mapping = aes(x = `Order Date`, y = `Total Order Amount ($)`),
+    size = 2
+  ) +
+  labs(
+    title = "Total Order Amount ($) Daily",
+    x = "Date",
+    y = "Order Amount ($)"
+  ) #* Looks like there's an outlier
 
 
 # -- Amount purchased (lb) --
+lbs_daily.line <- ggplot(data = lbs_daily) +
+  geom_line(
+    mapping = aes(x = `Order Date`, y = `Total Pounds Purchased`),
+    size = 2
+  ) +
+  labs(
+    title = "Total Pounds Purchased Daily",
+    x = "Date",
+    y = "Pounds Purchased"
+  )
 
 
 # -- Funds disbursed ($) --
