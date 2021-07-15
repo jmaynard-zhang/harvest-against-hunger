@@ -123,3 +123,26 @@ df <- df %>%
 ## Type char to num
 df <- df %>%
   mutate(`Pounds purchased`=as.numeric(`Pounds purchased`))
+
+
+# -- Fix misspelled farm names --
+farms <- df %>%
+  select(`Farm Name`) %>%
+  unique()
+
+correct_farms <- read_xlsx(path="./Datasets/correct_farm_names.xlsx")
+
+df <- df %>%
+  left_join(correct_farms)
+
+df <- df %>%
+  select(-`Farm Name`)
+
+df <- df %>%
+  rename(`Farm Name`=`Correct Farm Name`)
+
+# -- Add coords to the df --
+farm_coords <- read_xlsx("./Datasets/farm_coords.xlsx")
+
+df <- df %>%
+  left_join(farm_coords)

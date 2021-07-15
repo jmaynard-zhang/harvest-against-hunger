@@ -1,8 +1,12 @@
 # VISUALIZATION 1 - KCFS 2019-2021 Line Graphs
 
 # -- Load packages --
-library(ggplot2)
-library(RColorBrewer)
+load_pckg()
+
+
+# -- Load dataframes --
+load_dfs()
+
 
 # -- Num farms served --
 # By day
