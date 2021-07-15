@@ -1,8 +1,5 @@
 # DATAFRAMES
 
-# -- Load packages --
-load_pckg()
-
 # -- Num farms served --
 # By day
 farms_daily <- df %>%
@@ -11,8 +8,6 @@ farms_daily <- df %>%
   group_by(`Order Date`) %>%
   summarize(`Number of Farms` = n()) %>%
   na.omit()
-
-# By month
 
 # By year
 farms_yearly <- df %>%
@@ -29,6 +24,14 @@ orders_daily <- df %>%
   select(`Order Date`) %>%
   group_by(`Order Date`) %>%
   summarize(`Number of Orders` = n()) %>%
+  na.omit()
+
+# By month
+orders_monthly <- df %>%
+  select(`Order Date`, Coordinates) %>%
+  group_by(`Order Date`) %>%
+  summarize(`Number of Orders` = n(),
+            Coordinates=Coordinates) %>%
   na.omit()
 
 
