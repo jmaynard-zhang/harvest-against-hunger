@@ -146,3 +146,8 @@ farm_coords <- read_xlsx("./Datasets/farm_coords.xlsx")
 
 df <- df %>%
   left_join(farm_coords)
+
+# Separate coords into lat & long
+df <- df %>%
+  mutate(lat = as.numeric(gsub("^(.*?),.*", "\\1", Coordinates)),
+        lon = as.numeric(sub("^.*?,", "", Coordinates)))

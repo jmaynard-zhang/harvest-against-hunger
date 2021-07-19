@@ -1,5 +1,8 @@
 # DATAFRAMES
 
+# -- Load data --
+source("Data Compilation.R")
+
 # -- Num farms served --
 # By day
 farms_daily <- df %>%
@@ -21,17 +24,17 @@ farms_yearly <- df %>%
 # -- Num orders --
 # By day
 orders_daily <- df %>%
-  select(`Order Date`) %>%
-  group_by(`Order Date`) %>%
+  select(`Farm Name`, `Order Date`, lat, lon) %>%
+  group_by(`Order Date`, `Farm Name`, lat, lon) %>%
   summarize(`Number of Orders` = n()) %>%
   na.omit()
 
 # By month
 orders_monthly <- df %>%
-  select(`Order Date`, Coordinates) %>%
-  group_by(`Order Date`) %>%
-  summarize(`Number of Orders` = n(),
-            Coordinates=Coordinates) %>%
+  select(`Farm Name`, `Order Date`, lat, lon) %>%
+  mutate(order_month = lubridate::floor_date(`Order Date`, "month")) %>%
+  group_by(order_month, `Farm Name`, lat, lon) %>%
+  summarize(`Number of Orders` = n()) %>%
   na.omit()
 
 
@@ -50,6 +53,13 @@ dollars_daily <- df %>%
   select(`Order Amount ($)`, `Order Date`) %>%
   group_by(`Order Date`) %>%
   summarize(`Total Order Amount ($)` = sum(`Order Amount ($)`, na.rm = t))
+
+dollars_monthly <- df %>%
+  select(`Farm Name`, `Order Amount ($)`, `Order Date`, lon, lat) %>%
+  group_by(`Order Date`) %>%
+  summarize(`Total Order Amount ($)` = sum(`Order Amount ($)`, na.rm = t),
+            lon=lon,
+            lat=lat)
 
 
 # -- Amount purchased (lb) --

@@ -1,7 +1,7 @@
 # FUNCTIONS
 
 load_pckg <- function() {
-  # Data Wrangling
+  # Data compilation
   library(tidyverse)
   library(readxl)
   library(dplyr)
@@ -11,12 +11,16 @@ load_pckg <- function() {
   library(stringr)
   library(stringi)
 
+  # Dataframes
+  library(lubridate)
+
   # Visualizations
   library(ggplot2)
   library(RColorBrewer)
   library(writexl)
   library(plotly)
   library(sf)
+  library(ggrepel)
 }
 
 load_dfs <- function() {
