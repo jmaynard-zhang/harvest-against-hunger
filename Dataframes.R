@@ -61,7 +61,19 @@ dollars_monthly <- df %>%
 total_dollars <- df %>%
   select(`Farm Name`, `Order Amount ($)`, lat, lon) %>%
   group_by(`Farm Name`, lat, lon) %>%
-  summarize(total_order_amt=n()) %>%
+  summarize(total_order_amt=sum(`Order Amount ($)`)) %>%
+  na.omit()
+
+# -- Amount purchased (lb) --
+lbs_daily <- df %>%
+  select(`Pounds purchased`, `Order Date`) %>%
+  group_by(`Order Date`) %>%
+  summarize(`Total Pounds Purchased` = sum(`Pounds purchased`, na.rm = T))
+
+total_lbs <- df %>%
+  select(`Farm Name`, `Pounds purchased`, lat, lon) %>%
+  group_by(`Farm Name`, lat, lon) %>%
+  summarize(total_order_amt=sum(`Pounds purchased`)) %>%
   na.omit()
 
 
@@ -73,13 +85,6 @@ programs_daily <- df %>%
   group_by(`Order Date`) %>%
   summarize(`Number of Programs` = n()) %>%
   na.omit()
-
-
-# -- Amount purchased (lb) --
-lbs_daily <- df %>%
-  select(`Pounds purchased`, `Order Date`) %>%
-  group_by(`Order Date`) %>%
-  summarize(`Total Pounds Purchased` = sum(`Pounds purchased`, na.rm = T))
 
 
 # -- Funds disbursed ($) --
