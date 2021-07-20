@@ -73,7 +73,7 @@ lbs_daily <- df %>%
 total_lbs <- df %>%
   select(`Farm Name`, `Pounds purchased`, lat, lon) %>%
   group_by(`Farm Name`, lat, lon) %>%
-  summarize(total_order_amt=sum(`Pounds purchased`)) %>%
+  summarize(total_lbs=sum(`Pounds purchased`)) %>%
   na.omit()
 
 
@@ -84,6 +84,12 @@ programs_daily <- df %>%
   unique() %>% #* There are some misspellings that makes this inaccurate
   group_by(`Order Date`) %>%
   summarize(`Number of Programs` = n()) %>%
+  na.omit()
+
+total_progs <- df %>%
+  select(`Farm Name`, Program, lat, lon) %>%
+  group_by(`Farm Name`, lat, lon) %>%
+  summarize(total_progs=n()) %>%
   na.omit()
 
 
