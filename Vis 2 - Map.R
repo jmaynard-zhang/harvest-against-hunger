@@ -41,4 +41,15 @@ lbs.map <- ggplot() +
   ggtitle("Total Pounds Purchased since 2019")
 
 
+# -- Total Programs --
+progs.map <- ggplot() +
+  geom_polygon(data=wa,
+               aes(x=long, y=lat, group=group),
+               fill="grey", alpha=0.3) +
+  geom_point(data=total_progs, aes(x=lon, y=lat, alpha=total_progs)) +
+  theme_void() +
+  coord_map() +
+  ggtitle("Total Programs since 2019")
+
+
 # -- Total Funds Disbursed --

@@ -46,6 +46,12 @@ for (i in sheets) {
 
 # KCFS Funds
 funds <- read_excel("./Datasets/KCFS $.xlsx")
+funds <- funds %>%
+  pivot_longer(!Organization,
+               names_to="year",
+               values_to="funds_dispersed")
+funds <- funds %>%
+  mutate(year=as.Date(ISOdate(year, 1, 1)))
 
 
 # -- Select & Filter --
@@ -141,6 +147,7 @@ df <- df %>%
 df <- df %>%
   rename(`Farm Name`=`Correct Farm Name`)
 
+
 # -- Add coords to the df --
 farm_coords <- read_xlsx("./Datasets/farm_coords.xlsx")
 
@@ -151,3 +158,7 @@ df <- df %>%
 df <- df %>%
   mutate(lat = as.numeric(gsub("^(.*?),.*", "\\1", Coordinates)),
         lon = as.numeric(sub("^.*?,", "", Coordinates)))
+
+#
+# test <- df %>%
+#   full_join(funds, by=c("Program"="Organization", "Order Date"="year"))
