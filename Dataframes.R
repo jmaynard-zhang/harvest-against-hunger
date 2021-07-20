@@ -37,16 +37,12 @@ orders_monthly <- df %>%
   summarize(`Number of Orders` = n()) %>%
   na.omit()
 
-
-# -- Num programs --
-# By day
-programs_daily <- df %>%
-  select(`Program`, `Order Date`) %>%
-  unique() %>% #* There are some misspellings that makes this inaccurate
-  group_by(`Order Date`) %>%
-  summarize(`Number of Programs` = n()) %>%
+# Recorded
+total_orders <- df %>%
+  select(`Farm Name`, `Order Date`, lat, lon) %>%
+  group_by(`Farm Name`, lat, lon) %>%
+  summarize(total_orders=n()) %>%
   na.omit()
-
 
 # -- Order amount ($) --
 dollars_daily <- df %>%
@@ -57,9 +53,26 @@ dollars_daily <- df %>%
 dollars_monthly <- df %>%
   select(`Farm Name`, `Order Amount ($)`, `Order Date`, lon, lat) %>%
   group_by(`Order Date`) %>%
-  summarize(`Total Order Amount ($)` = sum(`Order Amount ($)`, na.rm = t),
+  summarize(total_order_amt = sum(`Order Amount ($)`, na.rm = t),
             lon=lon,
-            lat=lat)
+            lat=lat) %>%
+  na.omit()
+
+total_dollars <- df %>%
+  select(`Farm Name`, `Order Amount ($)`, lat, lon) %>%
+  group_by(`Farm Name`, lat, lon) %>%
+  summarize(total_order_amt=n()) %>%
+  na.omit()
+
+
+# -- Num programs --
+# By day
+programs_daily <- df %>%
+  select(`Program`, `Order Date`) %>%
+  unique() %>% #* There are some misspellings that makes this inaccurate
+  group_by(`Order Date`) %>%
+  summarize(`Number of Programs` = n()) %>%
+  na.omit()
 
 
 # -- Amount purchased (lb) --
