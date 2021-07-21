@@ -50,6 +50,3 @@ progs.map <- ggplot() +
   theme_void() +
   coord_map() +
   ggtitle("Total Programs since 2019")
-
-
-# -- Total Funds Disbursed --

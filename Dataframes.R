@@ -7,9 +7,19 @@ source("Data Compilation.R")
 # By day
 farms_daily <- df %>%
   select(`Farm Name`, `Order Date`) %>%
-  unique() %>% #* There are some misspellings that makes this inaccurate
+  unique() %>%
   group_by(`Order Date`) %>%
-  summarize(`Number of Farms` = n()) %>%
+  summarize(`Number of Farms`=n()) %>%
+  mutate(num_farms_cum=cumsum(`Number of Farms`)) %>%
+  na.omit()
+
+farms_monthly <- df %>%
+  select(`Farm Name`, `Order Date`) %>%
+  mutate(order_month=as.Date(format(df$`Order Date`, format="%Y-%m-01"))) %>%
+  unique() %>%
+  group_by(order_month) %>%
+  summarize(num_farms=n()) %>%
+  mutate(num_farms_cum=cumsum(num_farms)) %>%
   na.omit()
 
 # By year
@@ -32,9 +42,10 @@ orders_daily <- df %>%
 # By month
 orders_monthly <- df %>%
   select(`Farm Name`, `Order Date`, lat, lon) %>%
-  mutate(order_month = lubridate::floor_date(`Order Date`, "month")) %>%
+  mutate(order_month=lubridate::floor_date(`Order Date`, "month")) %>%
   group_by(order_month, `Farm Name`, lat, lon) %>%
-  summarize(`Number of Orders` = n()) %>%
+  summarize(num_orders=n()) %>%
+  mutate(num_orders_cum=cumsum(num_orders)) %>%
   na.omit()
 
 # Recorded
@@ -93,4 +104,7 @@ total_progs <- df %>%
   na.omit()
 
 
-# -- Funds disbursed ($) --
+# -- Funds disbursed --
+funds_yearly <- funds %>%
+  group_by(year) %>%
+  summarize(total_funds=sum(funds_dispersed, na.rm = T))

@@ -10,18 +10,28 @@ load_dfs()
 
 # -- Num farms served --
 # By day
-farms_daily.line <- ggplot(data = farms_daily) +
+farms_daily.line <- ggplot(data=farms_daily) +
   geom_line(
-    mapping = aes(x = `Order Date`, y = `Number of Farms`),
+    mapping = aes(x=`Order Date`, y = num_farms_cum),
     size = 2
   ) +
   labs(
-    title = "Total Farms Served Daily",
+    title = "Farms Served Since 2019",
     x = "Date",
-    y = "Number of Farms" #* Get rid of decimal values
+    y = "Number of Farms"
   )
 
 # By month
+farms.line <- ggplot(data=farms_monthly) +
+  geom_line(
+    mapping = aes(x = order_month, y = num_farms_cum),
+    size = 2
+  ) +
+  labs(
+    title = "Farms Served Monthly Since 2019",
+    x = "Date",
+    y = "Number of Farms"
+  )
 
 # By year
 farms_yearly.line <- ggplot(data = farms_yearly) +
@@ -91,3 +101,13 @@ lbs_daily.line <- ggplot(data = lbs_daily) +
 
 
 # -- Funds disbursed ($) --
+funds_yearly.line <- ggplot(data=funds_yearly) +
+  geom_line(
+    mapping=aes(x=year, y=total_funds),
+    size=2
+  ) +
+  labs(
+    title="Total Funds Dispersed Yearly",
+    x="Year",
+    y="Funds Dispersed ($)"
+  )

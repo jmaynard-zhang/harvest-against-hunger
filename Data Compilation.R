@@ -45,21 +45,18 @@ for (i in sheets) {
 }
 
 # KCFS Funds
-funds <- read_excel("./Datasets/KCFS $.xlsx")
-funds <- funds %>%
+funds <- read_excel("./Datasets/KCFS $.xlsx") %>%
   pivot_longer(!Organization,
                names_to="year",
-               values_to="funds_dispersed")
-funds <- funds %>%
-  mutate(year=as.Date(ISOdate(year, 1, 1)))
+               values_to="funds_dispersed") %>%
+  # mutate(year=as.Date(ISOdate(year, 1, 1)))
+  mutate(year=as.numeric(year))
 
 
 # -- Select & Filter --
 # Append lists
 X19_list <- X19_list %>%
   lapply(rename, `Order Date` = `Contract Date`)
-# X19_list <- X19_list %>%
-#   lapply(rename, `Order Amount` = `\r\nContract Amount`)
 x <- c()
 for (i in 1:length(X19_list)) {
   temp_cols <- colnames(X19_list[[i]])
@@ -158,7 +155,3 @@ df <- df %>%
 df <- df %>%
   mutate(lat = as.numeric(gsub("^(.*?),.*", "\\1", Coordinates)),
         lon = as.numeric(sub("^.*?,", "", Coordinates)))
-
-#
-# test <- df %>%
-#   full_join(funds, by=c("Program"="Organization", "Order Date"="year"))
