@@ -13,8 +13,8 @@ for (i in sheets) {
   temp <- read_excel("./Datasets/KCFS 2019.xlsx",
                      skip = 2,
                      sheet = X19_programs[i])
-  temp$Program <- X19_programs[i]
-  # temp$Year <- 2019
+  # temp$Program <- X19_programs[i]
+  # # temp$Year <- 2019
   X19_list[[i - 2]] <- temp
 }
 
@@ -26,8 +26,8 @@ for (i in sheets) {
   temp <- read_excel("./Datasets/KCFS 2020.xlsx",
                      skip = 3,
                      sheet = X20_programs[i])
-  temp$Program <- X20_programs[i]
-  # temp$Year <- 2020
+  # temp$Program <- X20_programs[i]
+  # # temp$Year <- 2020
   X20_list[[i - 1]] <- temp
 }
 
@@ -39,8 +39,8 @@ for (i in sheets) {
   temp <- read_excel("./Datasets/CARES.xlsx",
                      skip = 1,
                      sheet = cares_programs[i])
-  temp$Program <- cares_programs[i]
-  # temp$Year <- 2020
+  # temp$Program <- cares_programs[i]
+  # # temp$Year <- 2020
   cares.list[[i - 1]] <- temp
 }
 
@@ -80,7 +80,7 @@ list <- list %>%
   lapply(select, `Farm Name`,
          `Order Date`,
          `Pounds purchased`,
-         `Program`,
+         # `Program`,
          `Order Amount ($)`
          )
 ## Filter out "Totals"
