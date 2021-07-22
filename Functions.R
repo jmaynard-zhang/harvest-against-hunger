@@ -20,7 +20,7 @@ load_pckg <- function() {
   library(sf)
   library(ggrepel)
 
-  # Coding cleanup
+  # Coding cleanup (delete later)
   library(styler)
   library(lintr)
 }

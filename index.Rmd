@@ -1,0 +1,18 @@
+---
+title: "Harvest Against Hunger KCFS Visualizations"
+author: "Maynard Maynard-Zhang"
+date: "7/22/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+chooseCRANmirror(graphics = FALSE, ind = 1)
+knitr::opts_chunk$set(echo = TRUE)
+library(knitr)
+source("Functions.R")
+source("Data/Data Compilation.R")
+source("Vis 1 - Line.R")
+source("Vis 2 - Map.R")
+```
+
+Test

@@ -1,9 +1,5 @@
 # VISUALIZATION 1 - KCFS 2019-2021 Line Graphs
 
-# -- Load packages --
-load_pckg()
-
-
 # -- Load data --
 source("./Data/Data Compilation.R")
 
