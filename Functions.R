@@ -22,7 +22,3 @@ load_pckg <- function() {
   library(sf)
   library(ggrepel)
 }
-
-load_dfs <- function() {
-  source("Dataframes.R")
-}

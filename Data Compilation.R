@@ -13,8 +13,6 @@ for (i in sheets) {
   temp <- read_excel("./Datasets/KCFS 2019.xlsx",
                      skip = 2,
                      sheet = X19_programs[i])
-  # temp$Program <- X19_programs[i]
-  # # temp$Year <- 2019
   X19_list[[i - 2]] <- temp
 }
 
@@ -26,8 +24,6 @@ for (i in sheets) {
   temp <- read_excel("./Datasets/KCFS 2020.xlsx",
                      skip = 3,
                      sheet = X20_programs[i])
-  # temp$Program <- X20_programs[i]
-  # # temp$Year <- 2020
   X20_list[[i - 1]] <- temp
 }
 
@@ -39,8 +35,6 @@ for (i in sheets) {
   temp <- read_excel("./Datasets/CARES.xlsx",
                      skip = 1,
                      sheet = cares_programs[i])
-  # temp$Program <- cares_programs[i]
-  # # temp$Year <- 2020
   cares.list[[i - 1]] <- temp
 }
 
@@ -49,7 +43,6 @@ funds <- read_excel("./Datasets/KCFS $.xlsx") %>%
   pivot_longer(!Organization,
                names_to="year",
                values_to="funds_dispersed") %>%
-  # mutate(year=as.Date(ISOdate(year, 1, 1)))
   mutate(year=as.numeric(year))
 
 
@@ -80,7 +73,6 @@ list <- list %>%
   lapply(select, `Farm Name`,
          `Order Date`,
          `Pounds purchased`,
-         # `Program`,
          `Order Amount ($)`
          )
 ## Filter out "Totals"
@@ -106,8 +98,6 @@ for (i in 1:length(list)) {
 
 # -- Merge lists --
 df <- rbindlist(list)
-  # mutate(Year=as.Date(df$Year))
-  # mutate(Year=as.Date(ISOdate(df$Year, 1, 1)))
 
 
 # -- Fixing `Pounds purchased` --
