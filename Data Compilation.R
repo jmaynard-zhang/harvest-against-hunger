@@ -155,3 +155,8 @@ df <- df %>%
 df <- df %>%
   mutate(lat = as.numeric(gsub("^(.*?),.*", "\\1", Coordinates)),
         lon = as.numeric(sub("^.*?,", "", Coordinates)))
+
+
+# -- Add Order Month column
+df <- df %>%
+  mutate(order_month=lubridate::floor_date(`Order Date`, "month"))
