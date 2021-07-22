@@ -5,7 +5,7 @@ load_pckg()
 
 
 # -- Load data --
-source("Data Compilation.R")
+source("./Data/Data Compilation.R")
 
 
 # -- Num farms served --

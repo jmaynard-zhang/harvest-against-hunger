@@ -1,7 +1,11 @@
 # VISUALIZATION 2 - KCFS 2019-2021 Map Graphs
 
+# -- Load packages --
+load_pckg()
+
+
 # -- Load data --
-source("Data Compilation.R")
+source("./Data/Data Compilation.R")
 
 
 # -- Set up map --

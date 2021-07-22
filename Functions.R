@@ -11,14 +11,16 @@ load_pckg <- function() {
   library(stringr)
   library(stringi)
 
-  # Dataframes
-  library(lubridate)
-
   # Visualizations
+  library(lubridate)
   library(ggplot2)
   library(RColorBrewer)
   library(writexl)
   library(plotly)
   library(sf)
   library(ggrepel)
+
+  # Coding cleanup
+  library(styler)
+  library(lintr)
 }
