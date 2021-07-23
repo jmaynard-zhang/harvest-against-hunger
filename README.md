@@ -3,3 +3,5 @@ The objective of this project is to build data visualizations to showcase the im
 
 
 View project plan [here](https://docs.google.com/document/d/1Sojg5kTlZZ5urzm4aZR27VEBhX6-xmbT7d9Q6ZgS70M/edit?usp=sharing).
+
+View static visualizations [here](https://jmaynard-zhang.github.io/harvest-against-hunger/).
