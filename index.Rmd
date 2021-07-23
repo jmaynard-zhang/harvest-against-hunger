@@ -1,7 +1,6 @@
 ---
 title: "Harvest Against Hunger KCFS Visualizations"
 author: "Maynard Maynard-Zhang"
-date: "7/22/2021"
 output: html_document
 ---
 
@@ -15,4 +14,20 @@ source("Vis 1 - Line.R")
 source("Vis 2 - Map.R")
 ```
 
-Test
+# Line Visualizations
+
+```{r lines, echo=FALSE, message=FALSE}
+plot(farms.line)
+plot(orders.line)
+plot(dollars.line)
+plot(lbs.line)
+plot(funds.line)
+```
+
+# Map Visualizations
+
+```{r maps, echo=FALSE, message=FALSE}
+plot(orders.map)
+plot(dollars.map)
+plot(lbs.map)
+```

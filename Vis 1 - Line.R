@@ -95,7 +95,7 @@ funds_yearly <- funds %>%
   mutate(total_funds_cum=cumsum(total_funds)) %>%
   na.omit()
 
-funds_yearly.line <- ggplot(data=funds_yearly) +
+funds.line <- ggplot(data=funds_yearly) +
   geom_line(
     mapping=aes(x=year, y=total_funds_cum),
     size=2
