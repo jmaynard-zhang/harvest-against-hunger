@@ -10,8 +10,8 @@ knitr::opts_chunk$set(echo = TRUE)
 library(knitr)
 source("Functions.R")
 source("Data/Data Compilation.R")
-source("Vis 1 - Line.R")
-source("Vis 2 - Map.R")
+source("Static_Scripts/Vis 1 - Line.R")
+source("Static_Scripts/Vis 2 - Map.R")
 ```
 
 # Line Visualizations

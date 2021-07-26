@@ -7,10 +7,10 @@ load_pckg()
 # -- Load data --
 # KCFS 2019
 X19_list <- list()
-X19_programs <- excel_sheets(path="Data/KCFS 2019.xlsx")
+X19_programs <- excel_sheets(path="./Data/KCFS 2019.xlsx")
 sheets <- 3:length(X19_programs)
 for (i in sheets) {
-  temp <- read_excel("Data/KCFS 2019.xlsx",
+  temp <- read_excel("./Data/KCFS 2019.xlsx",
                      skip = 2,
                      sheet = X19_programs[i])
   X19_list[[i - 2]] <- temp
@@ -18,10 +18,10 @@ for (i in sheets) {
 
 # KCFS 2020
 X20_list <- list()
-X20_programs <- excel_sheets(path="Data/KCFS 2020.xlsx")
+X20_programs <- excel_sheets(path="./Data/KCFS 2020.xlsx")
 sheets <- 2:length(X19_programs)
 for (i in sheets) {
-  temp <- read_excel("Data/KCFS 2020.xlsx",
+  temp <- read_excel("./Data/KCFS 2020.xlsx",
                      skip = 3,
                      sheet = X20_programs[i])
   X20_list[[i - 1]] <- temp
@@ -29,17 +29,17 @@ for (i in sheets) {
 
 # CARES
 cares.list <- list()
-cares_programs <- excel_sheets(path="Data/CARES.xlsx")
+cares_programs <- excel_sheets(path="./Data/CARES.xlsx")
 sheets <- 2:length(cares_programs)
 for (i in sheets) {
-  temp <- read_excel("Data/CARES.xlsx",
+  temp <- read_excel("./Data/CARES.xlsx",
                      skip = 1,
                      sheet = cares_programs[i])
   cares.list[[i - 1]] <- temp
 }
 
 # KCFS Funds
-funds <- read_excel("Data/KCFS $.xlsx") %>%
+funds <- read_excel("./Data/KCFS $.xlsx") %>%
   pivot_longer(!Organization,
                names_to="year",
                values_to="funds_dispersed") %>%
@@ -123,7 +123,7 @@ farms <- df %>%
   select(`Farm Name`) %>%
   unique()
 
-correct_farms <- read_xlsx(path="Data/correct_farm_names.xlsx")
+correct_farms <- read_xlsx(path="./Data/correct_farm_names.xlsx")
 
 df <- df %>%
   left_join(correct_farms)
@@ -136,7 +136,7 @@ df <- df %>%
 
 
 # -- Add coords to the df --
-farm_coords <- read_xlsx("Data/farm_coords.xlsx")
+farm_coords <- read_xlsx("./Data/farm_coords.xlsx")
 
 df <- df %>%
   left_join(farm_coords)
