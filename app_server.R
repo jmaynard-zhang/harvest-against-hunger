@@ -3,12 +3,13 @@ server <- function(input, output) {
     output$line <- renderPlot({
         # Select data widget
         data <- get(input$line_data)
+        y_col <- colnames(data)[[3]]
 
         # Plot
         line.plot <- ggplot(data=data) +
             geom_line(
                 mapping = aes(x = data$order_month,
-                              y = data$num_farms_cum),
+                              y = data[[3]]),
                 size = 2
             ) +
             labs(

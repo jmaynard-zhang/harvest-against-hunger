@@ -3,7 +3,10 @@ line_data <- selectInput(
     inputId = "line_data",
     label = "Select what data to display:",
     choices = c(
-        "farms_monthly"
+        "farms_monthly",
+        "orders_monthly",
+        "dollars_monthly",
+        "lbs_monthly"
     ),
     selected="farms_monthly"
 )
