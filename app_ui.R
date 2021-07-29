@@ -17,7 +17,7 @@ line_panel <- tabPanel(
         line_data
     ),
     mainPanel(
-        plotOutput("line")
+        plotlyOutput("line")
     )
 )
 
