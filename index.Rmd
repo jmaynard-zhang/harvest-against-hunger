@@ -1,5 +1,5 @@
 ---
-title: "Harvest Against Hunger KCFS Visualizations"
+title: "KCFS Static Visualizations"
 author: "Maynard Maynard-Zhang"
 output: html_document
 ---
