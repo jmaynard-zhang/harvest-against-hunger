@@ -15,7 +15,7 @@ server <- function(input, output) {
             labs(
                 title = input$line_select,
                 x = "Date",
-                y = "Number of Farms"
+                y = input$line_select
             )
 
         return(ggplotly(line.plot))
@@ -38,6 +38,6 @@ server <- function(input, output) {
                            alpha=map_data[[4]])) +
             theme_void() +
             coord_map() +
-            ggtitle("Total Orders since 2019")
+            ggtitle(input$map_select)
     })
 }
