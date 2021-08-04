@@ -8,7 +8,7 @@ server <- function(input, output) {
         # Plot
         line.plot <- ggplot(data=line_data) +
             geom_line(
-                mapping = aes(x = order_month,
+                mapping = aes(x = line_data[[1]],
                               y = line_data[[3]]),
                 size = 2
             ) +

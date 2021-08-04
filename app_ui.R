@@ -6,7 +6,8 @@ line_select <- selectInput(
         "farms_monthly",
         "orders_monthly",
         "dollars_monthly",
-        "lbs_monthly"
+        "lbs_monthly",
+        "funds_yearly"
     )
 )
 
