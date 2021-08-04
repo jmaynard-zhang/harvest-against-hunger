@@ -6,17 +6,29 @@ server <- function(input, output) {
         y_col <- colnames(data)[[3]]
 
         # Plot
-        line.plot <- ggplot(data=line_data) +
-            geom_line(
-                mapping = aes(x = line_data[[1]],
-                              y = line_data[[3]]),
-                size = 2
-            ) +
-            labs(
+        line.plot <- plot_ly(line_data, x = line_data[[1]]) %>%
+            add_lines(y = line_data[[3]],
+                      name = input$line_select) %>%
+            layout(
                 title = input$line_select,
-                x = "Date",
-                y = input$line_select
-            )
+                xaxis = list(
+                    rangeslider = list(type = "date"),
+                    title = "Date"),
+                yaxis = list(title = input$line_select))
+        # line.plot <- ggplot(data=line_data) +
+        #     geom_line(
+        #         mapping = aes(x = line_data[[1]],
+        #                       y = line_data[[3]]),
+        #         size = 2
+        #     ) +
+        #     labs(
+        #         title = input$line_select,
+        #         x = "Date",
+        #         y = input$line_select
+        #     ) +
+        #     layout(
+        #         rangeslider = list(type = "date")
+        #     )
 
         return(ggplotly(line.plot))
     })
@@ -32,7 +44,7 @@ server <- function(input, output) {
                          aes(x=long, y=lat, group=group),
                          alpha=0.3) +
             geom_point(data=map_data,
-                       fill = "grey",
+                       fill = "light grey",
                        aes(x=map_data$lon,
                            y=map_data$lat,
                            alpha=map_data[[4]])) +
