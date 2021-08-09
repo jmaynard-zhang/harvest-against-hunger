@@ -36,6 +36,6 @@ server <- function(input, output) {
                            alpha=map_data[[4]])) +
             theme_void() +
             coord_map() +
-            ggtitle(input$map_select)
+            ggtitle(paste(input$map_select, "since 2019"))
     })
 }
