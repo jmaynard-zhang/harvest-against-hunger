@@ -43,7 +43,7 @@ map_panel <- tabPanel(
 )
 
 # UI
-ui <- navbarPage(
+ui <- fluidPage(
     "King County Farmers Share",
     line_panel,
     map_panel

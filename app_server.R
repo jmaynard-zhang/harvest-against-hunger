@@ -15,20 +15,6 @@ server <- function(input, output) {
                     rangeslider = list(type = "date"),
                     title = "Date"),
                 yaxis = list(title = input$line_select))
-        # line.plot <- ggplot(data=line_data) +
-        #     geom_line(
-        #         mapping = aes(x = line_data[[1]],
-        #                       y = line_data[[3]]),
-        #         size = 2
-        #     ) +
-        #     labs(
-        #         title = input$line_select,
-        #         x = "Date",
-        #         y = input$line_select
-        #     ) +
-        #     layout(
-        #         rangeslider = list(type = "date")
-        #     )
 
         return(ggplotly(line.plot))
     })
