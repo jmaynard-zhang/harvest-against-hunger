@@ -19,6 +19,8 @@ load_pckg <- function() {
   library(plotly)
   library(sf)
   library(ggrepel)
+  library(maps)
+  library(mapproj)
 
   # Coding cleanup (delete later)
   library(styler)

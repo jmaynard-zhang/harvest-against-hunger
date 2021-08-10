@@ -1,0 +1,13 @@
+name: harvest-against-hunger
+title: harvest-against-hunger
+username:
+account: maynard-zhang-uw
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 4477642
+bundleId: 4909211
+url: https://maynard-zhang-uw.shinyapps.io/harvest-against-hunger/
+when: 1628630096.57495
+lastSyncTime: 1628630096.57495
+asMultiple: FALSE
+asStatic: FALSE
