@@ -8,4 +8,6 @@ The objective of this project is to build data visualizations to showcase the im
 
 2. [Static Visualization Web Page](https://jmaynard-zhang.github.io/harvest-against-hunger/)
 
-3. Interactive Visualization Web Page (*in progress*)
+3. [Interactive Visualization Web Page](https://maynard-zhang-uw.shinyapps.io/harvest-against-hunger/)
+
+4. Final Visualizations on Harvest Against Hunger website (*in progress*)
