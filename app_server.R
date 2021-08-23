@@ -19,23 +19,23 @@ server <- function(input, output) {
         return(ggplotly(line.plot))
     })
 
-    # Vis 2 - Map
-    output$map <- renderPlotly({
-        # Select data widget
-        map_data <- get(input$map_select)
-
-        # Plot
-        map.plot <- ggplot() +
-            geom_polygon(data=wa,
-                         aes(x=long, y=lat, group=group),
-                         alpha=0.3) +
-            geom_point(data=map_data,
-                       fill = "light grey",
-                       aes(x=map_data$lon,
-                           y=map_data$lat,
-                           alpha=map_data[[4]])) +
-            theme_void() +
-            coord_map() +
-            ggtitle(paste(input$map_select, "since 2019"))
-    })
+    # # Vis 2 - Map
+    # output$map <- renderPlotly({
+    #     # Select data widget
+    #     map_data <- get(input$map_select)
+    #
+    #     # Plot
+    #     map.plot <- ggplot() +
+    #         geom_polygon(data=wa,
+    #                      aes(x=long, y=lat, group=group),
+    #                      alpha=0.3) +
+    #         geom_point(data=map_data,
+    #                    fill = "light grey",
+    #                    aes(x=map_data$lon,
+    #                        y=map_data$lat,
+    #                        alpha=map_data[[4]])) +
+    #         theme_void() +
+    #         coord_map() +
+    #         ggtitle(paste(input$map_select, "since 2019"))
+    # })
 }

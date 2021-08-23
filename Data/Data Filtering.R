@@ -5,7 +5,7 @@ source("./Data/Data Compilation.R")
 
 # ~~ LINE DATA ~~
 # -- Num farms served --
-farms_monthly <- df %>%
+`Farms Served Monthly` <- df %>%
   select(`Farm Name`, `Order Date`) %>%
   mutate(order_month=lubridate::floor_date(`Order Date`, "month")) %>%
   unique() %>%
@@ -16,7 +16,7 @@ farms_monthly <- df %>%
 
 
 # -- Num orders --
-orders_monthly <- df %>%
+`Number of Orders Monthly` <- df %>%
   select(`Farm Name`, `Order Date`) %>%
   mutate(order_month=lubridate::floor_date(`Order Date`, "month")) %>%
   group_by(order_month) %>%
@@ -26,7 +26,7 @@ orders_monthly <- df %>%
 
 
 # -- Order amount ($) --
-dollars_monthly <- df %>%
+`Order Amount ($) Monthly` <- df %>%
   select(`Order Date`, `Order Amount ($)`) %>%
   mutate(order_month=lubridate::floor_date(`Order Date`, "month")) %>%
   group_by(order_month) %>%
@@ -36,7 +36,7 @@ dollars_monthly <- df %>%
 
 
 # -- Amount purchased (lb) --
-lbs_monthly <- df %>%
+`Pounds Purchased Monthly` <- df %>%
   select(order_month, `Pounds purchased`) %>%
   group_by(order_month) %>%
   summarize(total_lbs=sum(`Pounds purchased`, na.rm=T)) %>%

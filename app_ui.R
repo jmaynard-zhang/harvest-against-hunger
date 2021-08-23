@@ -1,13 +1,20 @@
 # Vis 1 - Line
+# Get titles
+t1 = get_title("farms_monthly")
+t2 = get_title("orders_monthly")
+t3 = get_title("dollars_monthly")
+t4 = get_title("lbs_monthly")
+t5 = get_title("funds_yearly")
+
 line_select <- selectInput(
     inputId = "line_select",
     label = "Select what data to display:",
     choices = c(
-        "farms_monthly",
-        "orders_monthly",
-        "dollars_monthly",
-        "lbs_monthly",
-        "funds_yearly"
+        "Farms Served Monthly",
+        t2="orders_monthly",
+        t3="dollars_monthly",
+        t4="lbs_monthly",
+        t5="funds_yearly"
     )
 )
 
@@ -45,6 +52,6 @@ map_panel <- tabPanel(
 # UI
 ui <- navbarPage(
     "King County Farmers Share",
-    line_panel,
-    map_panel
+    line_panel#,
+    #map_panel
 )
