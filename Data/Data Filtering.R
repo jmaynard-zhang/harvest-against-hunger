@@ -5,7 +5,7 @@ source("./Data/Data Compilation.R")
 
 # ~~ LINE DATA ~~
 # -- Num farms served --
-`Farms Served Monthly` <- df %>%
+`Number of Farms Served Monthly` <- df %>%
   select(`Farm Name`, `Order Date`) %>%
   mutate(order_month=lubridate::floor_date(`Order Date`, "month")) %>%
   unique() %>%
@@ -30,8 +30,8 @@ source("./Data/Data Compilation.R")
   select(`Order Date`, `Order Amount ($)`) %>%
   mutate(order_month=lubridate::floor_date(`Order Date`, "month")) %>%
   group_by(order_month) %>%
-  summarize(total_dollars=sum(`Order Amount ($)`, na.rm=T)) %>%
-  mutate(total_dollars_cum=cumsum(total_dollars)) %>%
+  summarize(`Total Order Amount ($)`=sum(`Order Amount ($)`, na.rm=T)) %>%
+  mutate(cumulative=cumsum(`Total Order Amount ($)`)) %>%
   na.omit()
 
 
@@ -39,13 +39,13 @@ source("./Data/Data Compilation.R")
 `Pounds Purchased Monthly` <- df %>%
   select(order_month, `Pounds purchased`) %>%
   group_by(order_month) %>%
-  summarize(total_lbs=sum(`Pounds purchased`, na.rm=T)) %>%
-  mutate(total_lbs_cum=cumsum(total_lbs)) %>%
+  summarize(`Total Pounds Purchased`=sum(`Pounds purchased`, na.rm=T)) %>%
+  mutate(cumulative=cumsum(`Total Pounds Purchased`)) %>%
   na.omit()
 
 
 # -- Funds disbursed ($) --
-funds_yearly <- funds %>%
+`Funds Disbursed ($) Yearly` <- funds %>%
   group_by(year) %>%
   summarize(total_funds=sum(funds_dispersed, na.rm = T)) %>%
   mutate(total_funds_cum=cumsum(total_funds)) %>%
@@ -58,15 +58,15 @@ wa <- map_data("county", "washington")
 
 
 # -- Total Orders --
-total_orders <- df %>%
+`Total Orders` <- df %>%
   select(`Farm Name`, `Order Date`, lat, lon) %>%
   group_by(`Farm Name`, lat, lon) %>%
-  summarize(total_orders=n()) %>%
+  summarize(`Total Orders`=n()) %>%
   na.omit()
 
 
 # -- Total Order Amount ($) --
-total_dollars <- df %>%
+`Total Order Amount ($)` <- df %>%
   select(`Farm Name`, `Order Amount ($)`, lat, lon) %>%
   group_by(`Farm Name`, lat, lon) %>%
   summarize(total_order_amt=sum(`Order Amount ($)`)) %>%
@@ -74,8 +74,9 @@ total_dollars <- df %>%
 
 
 # -- Total Pounds Purchased --
-total_lbs <- df %>%
+`Total Pounds Purchased` <- df %>%
   select(`Farm Name`, `Pounds purchased`, lat, lon) %>%
   group_by(`Farm Name`, lat, lon) %>%
-  summarize(total_lbs=sum(`Pounds purchased`)) %>%
+  summarize(`Total Pounds Purchased`=sum(`Pounds purchased`)) %>%
   na.omit()
+
