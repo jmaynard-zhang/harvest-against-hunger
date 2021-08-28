@@ -44,7 +44,8 @@ map_panel <- tabPanel(
 
 # UI
 ui <- navbarPage(
-    "King County Farmers Share",
+    "KCFS Data",
+    theme = shinytheme("cosmo"),
     line_panel,
     map_panel
 )
