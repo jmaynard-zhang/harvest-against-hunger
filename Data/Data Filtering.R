@@ -61,7 +61,7 @@ wa <- map_data("county", "washington")
 `Total Orders` <- df %>%
   select(`Farm Name`, `Order Date`, lat, lon) %>%
   group_by(`Farm Name`, lat, lon) %>%
-  summarize(`Total Orders`=n()) %>%
+  summarize(total=n()) %>%
   na.omit()
 
 
@@ -69,7 +69,7 @@ wa <- map_data("county", "washington")
 `Total Order Amount ($)` <- df %>%
   select(`Farm Name`, `Order Amount ($)`, lat, lon) %>%
   group_by(`Farm Name`, lat, lon) %>%
-  summarize(total_order_amt=sum(`Order Amount ($)`)) %>%
+  summarize(total=sum(`Order Amount ($)`)) %>%
   na.omit()
 
 
@@ -77,6 +77,6 @@ wa <- map_data("county", "washington")
 `Total Pounds Purchased` <- df %>%
   select(`Farm Name`, `Pounds purchased`, lat, lon) %>%
   group_by(`Farm Name`, lat, lon) %>%
-  summarize(`Total Pounds Purchased`=sum(`Pounds purchased`)) %>%
+  summarize(total=sum(`Pounds purchased`)) %>%
   na.omit()
 

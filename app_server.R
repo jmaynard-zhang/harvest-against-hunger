@@ -32,9 +32,10 @@ server <- function(input, output) {
                          aes(x=long, y=lat, group=group),
                          alpha=0.3) +
             geom_point(data=map_data,
-                       aes(x=map_data$lon,
-                           y=map_data$lat,
-                           alpha=map_data[[4]]),
+                       aes(x=lon,
+                           y=lat,
+                           alpha=total,
+                           text=paste("farm:", `Farm Name`)),
                        color="dark green") +
             theme_void() +
             coord_map() +
