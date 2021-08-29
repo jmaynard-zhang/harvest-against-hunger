@@ -4,7 +4,7 @@
             <citeinfo>
                 <origin/>
                 <pubdate>20050923</pubdate>
-                <title>King County Political Boundary (no waterbodies) / kingco_area</title>
+                <title>King County with Natural Shoreline for Puget Sound and Lake Washington / kingsh_area</title>
                 <edition>One</edition>
                 <geoform>vector digital data</geoform>
                 <pubinfo>
@@ -14,45 +14,46 @@
                 <othercit>None</othercit>
                 <onlink>https://kingcounty.maps.arcgis.com/home/item.html?id=f1e9e887567b47c68c8dfc8bb352208c</onlink>
                 <onlink>https://kingcounty.maps.arcgis.com/home/item.html?id=abb769d2c51c462287a7d8c0b80fee47</onlink>
-                <onlink>http://www5.kingcounty.gov/sdc/Metadata.aspx?Layer=kingco</onlink>
+                <onlink>http://www5.kingcounty.gov/sdc/Metadata.aspx?Layer=kingsh</onlink>
                 <onlink>http://www5.kingcounty.gov/sdc/addl_doc/KCGISCenterTermsAndConditions.pdf</onlink>
                 <onlink>http://www5.kingcounty.gov/sdc/addl_doc/KCGISCenterHelpUsingKCOpenData.pdf</onlink>
             </citeinfo>
         </citation>
         <descript>
-            <abstract>King County Political Boundary</abstract>
-            <purpose>King County Political Boundary extracted from washco. Shows political boundaries for King County independent of shoreline. Useful for showing all areas of county; including water areas. Use Kingsh to depict interior political boundaries with edge-of-water shoreline.</purpose>
+            <abstract>County boundaries for King County, with Puget Sound and Lake Washington removed, showing coastal shoreline and Mercer Island. Also as WASHSH for all of Washington State.</abstract>
+            <purpose>Depicts King County similar to KINGCO except that Puget Sound and Lake Washington are removed. In these areas the current version of WTRBDY is used to depict the natural shoreline, rather than the political boundary.</purpose>
             <supplinf>None</supplinf>
         </descript>
         <timeperd>
             <timeinfo>
                 <sngdate>
-                    <caldate>20090501</caldate>
+                    <caldate>20100101</caldate>
                 </sngdate>
             </timeinfo>
             <current>publication date</current>
         </timeperd>
         <status>
             <progress>Complete</progress>
-            <update>Irregular</update>
+            <update>As needed</update>
         </status>
         <spdom>
             <bounding>
-                <westbc>-122.556096</westbc>
+                <westbc>-122.542058</westbc>
                 <eastbc>-121.063188</eastbc>
-                <northbc>47.788858</northbc>
-                <southbc>47.073441</southbc>
+                <northbc>47.788407</northbc>
+                <southbc>47.073649</southbc>
             </bounding>
         </spdom>
         <keywords>
             <theme>
                 <themekt>Not applicable</themekt>
                 <themekey>political_OpenData</themekey>
-                <themekey>politicl</themekey>
-                <themekey>political</themekey>
-                <themekey>jurisdiction</themekey>
-                <themekey>county boundaries</themekey>
-                <themekey>kingco_area</themekey>
+                <themekey>county</themekey>
+                <themekey>boundary</themekey>
+                <themekey>boundaries</themekey>
+                <themekey>state</themekey>
+                <themekey>shoreline</themekey>
+                <themekey>kingsh_area</themekey>
                 <themekey>kingcounty_opendata</themekey>
             </theme>
             <theme>
@@ -88,21 +89,27 @@
             </cntinfo>
         </ptcontac>
         <browse>
-            <browsen>http://www5.kingcounty.gov/sdc/dataimages/kingco.jpg</browsen>
+            <browsen>http://www5.kingcounty.gov/sdc/DataImages/kingsh.jpg</browsen>
             <browsed>JPG File of layer overlain on base of WA counties or local cities</browsed>
             <browset>JPG</browset>
         </browse>
         <native>ESRI ArcGIS 10.0.0.2414</native>
     </idinfo>
     <dataqual>
+        <logic>Contiguous portions of Puget Sound are used to define shoreline portion. Lake Washington is also removed.</logic>
+        <complete>Entirety of King County</complete>
         <lineage>
             <procstep>
-                <procdesc>Source type: Derived 1990 01/01/1990 Scale: 1:100000 TIGER Scale: CENSUS Scale: DATA Scale:</procdesc>
-                <procdate>20041117</procdate>
+                <procdesc>Derived from 1990 Census TIGER data at 1:100000 scale</procdesc>
+                <procdate>19900101</procdate>
             </procstep>
             <procstep>
-                <procdesc>Selected from WASHCO_AREA whenever WASHCO_AREA is updated. WASHCO_AREA was updated by bringing county edges in alignment with CITY_AREA.</procdesc>
+                <procdesc>Generation of this layer was linked to updates to WTRBDY_AREA. Whenever major review/update is performed on WTRBDY, the adjusted extent of Puget Sound and Lake Washington is used to regenerate this layer from the WASHCO_AREA source.</procdesc>
                 <procdate>20090501</procdate>
+            </procstep>
+            <procstep>
+                <procdesc>Updated major lake boundaries with 2010 ortho imagery. Regenerated KING_SH.</procdesc>
+                <procdate>20110201</procdate>
             </procstep>
         </lineage>
     </dataqual>
@@ -118,12 +125,19 @@
     <eainfo>
         <detailed>
             <enttyp>
-                <enttypl>PLIBRARY.POLITICL.xxxx231317</enttypl>
+                <enttypl>PLIBRARY.POLITICL.xxxx206553</enttypl>
+                <enttypd>Polygon Attribute Table</enttypd>
+                <enttypds>ESRI</enttypds>
             </enttyp>
             <attr>
                 <attrlabl>COUNTY</attrlabl>
-                <attrdef>Name of a Washington State county</attrdef>
-                <attrdefs>King County</attrdefs>
+                <attrdef>Name of Washington state county</attrdef>
+                <attrdefs>TIGER files</attrdefs>
+                <attrdomv>
+                    					
+                    <udom>All uppercase text</udom>
+                    				
+                </attrdomv>
             </attr>
             <attr>
                 <attrlabl>OBJECTID</attrlabl>
@@ -147,14 +161,65 @@
             </attr>
             <attr>
                 <attrlabl>SHAPE.area</attrlabl>
+                <attrdef>Feature area</attrdef>
+                <attrdefs>ESRI</attrdefs>
+                <attrdomv>
+                    					
+                    <udom>Floating point value in feet</udom>
+                    				
+                </attrdomv>
             </attr>
             <attr>
                 <attrlabl>SHAPE.len</attrlabl>
+                <attrdef>Feature length</attrdef>
+                <attrdefs>ESRI</attrdefs>
+                <attrdomv>
+                    					
+                    <udom>Floating point value in feet</udom>
+                    				
+                </attrdomv>
             </attr>
         </detailed>
         <detailed>
             <enttyp>
-                <enttypl>kingco</enttypl>
+                <enttypl>maint.GISC.washsh_area</enttypl>
+                <enttypd>Polygon attribute table</enttypd>
+                <enttypds>King County</enttypds>
+            </enttyp>
+            <attr>
+                <attrlabl>SHAPE</attrlabl>
+                <attrdef>Feature geometry.</attrdef>
+                <attrdefs>ESRI</attrdefs>
+                <attrdomv>
+                    					
+                    <udom>Coordinates defining the features.</udom>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>SHAPE.area</attrlabl>
+                <attrdef>Area of feature</attrdef>
+                <attrdefs>ESRI</attrdefs>
+                <attrdomv>
+                    					
+                    <udom>Floating point value in feet</udom>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>SHAPE.len</attrlabl>
+                <attrdef>Length of feature boundary</attrdef>
+                <attrdefs>ESRI</attrdefs>
+                <attrdomv>
+                    					
+                    <udom>Floating point value in feet</udom>
+                    				
+                </attrdomv>
+            </attr>
+        </detailed>
+        <detailed>
+            <enttyp>
+                <enttypl>washco</enttypl>
                 <enttypd>Polygon feature attribute table</enttypd>
                 <enttypds>ESRI</enttypds>
             </enttyp>
@@ -195,7 +260,7 @@
                 <cntvoice>206-263-5220</cntvoice>
             </cntinfo>
         </distrib>
-        <resdesc>/plibrary2/politicl/shapes/polygon/kingco.shp</resdesc>
+        <resdesc>/plibrary2/politicl/shapes/polygon/kingsh.shp</resdesc>
         <distliab>King County disclaims any warranty of use of any digital product or data beyond that for which it was designed.</distliab>
         <stdorder>
             <digform>
@@ -207,7 +272,7 @@
         </stdorder>
     </distinfo>
     <metainfo>
-        <metd>20121231</metd>
+        <metd>20121207</metd>
         <metc>
             <cntinfo>
                 <cntorgp>
