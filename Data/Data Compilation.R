@@ -43,7 +43,7 @@ funds <- read_excel("./Data/KCFS $.xlsx") %>%
   pivot_longer(!Organization,
                names_to="year",
                values_to="funds_dispersed") %>%
-  mutate(year=as.numeric(year))
+  mutate(year=as.Date(ISOdate(year, 1, 1)))
 
 
 # -- Select & Filter --
