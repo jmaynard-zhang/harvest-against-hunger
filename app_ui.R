@@ -36,8 +36,8 @@ map_shape_select <- selectInput(
     inputId="map_shape_select",
     label="Select the map shape:",
     choices=c(
-        "Washington State"="wa",
-        "King County"="kingco"
+        "King County"="kingco",
+        "Washington State"="wa"
     )
 )
 

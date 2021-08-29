@@ -54,12 +54,17 @@ source("./Data/Data Compilation.R")
 
 # ~~ MAP DATA ~~
 # -- Set up map --
-wa <- map_data("county", "washington")
 kingco <- readOGR(dsn="Data/kingco_shapefile/King_County_with_Natural_Shoreline_for_Puget_Sound_and_Lake_Washington___kingsh_area.shp")
+wa <- map_data("county", "washington")
+
+
+# -- Remove farms with no locations --
+df_map <- df %>%
+  filter(!(`Farm Name` == "Lily Fields"))
 
 
 # -- Total Orders --
-`Total Orders` <- df %>%
+`Total Orders` <- df_map %>%
   select(`Farm Name`, `Order Date`, lat, lon) %>%
   group_by(`Farm Name`, lat, lon) %>%
   summarize(total=n()) %>%
@@ -67,7 +72,7 @@ kingco <- readOGR(dsn="Data/kingco_shapefile/King_County_with_Natural_Shoreline_
 
 
 # -- Total Order Amount ($) --
-`Total Order Amount ($)` <- df %>%
+`Total Order Amount ($)` <- df_map %>%
   select(`Farm Name`, `Order Amount ($)`, lat, lon) %>%
   group_by(`Farm Name`, lat, lon) %>%
   summarize(total=sum(`Order Amount ($)`)) %>%
@@ -75,7 +80,7 @@ kingco <- readOGR(dsn="Data/kingco_shapefile/King_County_with_Natural_Shoreline_
 
 
 # -- Total Pounds Purchased --
-`Total Pounds Purchased` <- df %>%
+`Total Pounds Purchased` <- df_map %>%
   select(`Farm Name`, `Pounds purchased`, lat, lon) %>%
   group_by(`Farm Name`, lat, lon) %>%
   summarize(total=sum(`Pounds purchased`)) %>%
