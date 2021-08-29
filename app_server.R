@@ -6,9 +6,11 @@ server <- function(input, output) {
         y_col <- colnames(data)[[3]]
 
         # Plot
-        line.plot <- plot_ly(line_data, x = line_data[[1]]) %>%
-            add_lines(y = line_data[[3]],
-                      name = input$line_select) %>%
+        line.plot <- plot_ly(line_data,
+                             x = line_data[[1]],
+                             y = line_data[[3]],
+                             mode="lines",
+                             line=list(color="#90c046")) %>%
             layout(
                 title = input$line_select,
                 xaxis = list(
