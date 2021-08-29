@@ -10,7 +10,7 @@ server <- function(input, output) {
                              x = line_data[[1]],
                              y = line_data[[3]],
                              mode="lines",
-                             line=list(color="#90c046")) %>%
+                             line=list(color="#89ce61")) %>%
             layout(
                 title = input$line_select,
                 xaxis = list(
@@ -32,10 +32,10 @@ server <- function(input, output) {
                          aes(x=long, y=lat, group=group),
                          alpha=0.3) +
             geom_point(data=map_data,
-                       fill = "light grey",
                        aes(x=map_data$lon,
                            y=map_data$lat,
-                           alpha=map_data[[4]])) +
+                           alpha=map_data[[4]]),
+                       color="dark green") +
             theme_void() +
             coord_map() +
             ggtitle(paste(input$map_select, "since 2019"))
