@@ -30,7 +30,8 @@ server <- function(input, output) {
         map.plot <- ggplot() +
             geom_polygon(data=wa,
                          aes(x=long, y=lat, group=group),
-                         alpha=0.3) +
+                         alpha=0.3,
+                         fill="#89ce61") +
             geom_point(data=map_data,
                        aes(x=lon,
                            y=lat,

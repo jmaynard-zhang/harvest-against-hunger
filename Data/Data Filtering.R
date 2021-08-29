@@ -55,6 +55,7 @@ source("./Data/Data Compilation.R")
 # ~~ MAP DATA ~~
 # -- Set up map --
 wa <- map_data("county", "washington")
+kingco <- readOGR(dsn="Data/kingco_shapefile/King_County_Political_Boundary_(no_waterbodies)___kingco_area.shp")
 
 
 # -- Total Orders --

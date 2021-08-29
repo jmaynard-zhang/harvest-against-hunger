@@ -12,6 +12,9 @@ load_pckg <- function() {
   library(stringr)
   library(stringi)
 
+  # Data filtering
+  library(rgdal)
+
   # Visualizations
   library(lubridate)
   library(ggplot2)
