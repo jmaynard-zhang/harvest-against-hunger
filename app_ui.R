@@ -32,10 +32,20 @@ map_select <- selectInput(
     )
 )
 
+map_shape_select <- selectInput(
+    inputId="map_shape_select",
+    label="Select the map shape:",
+    choices=c(
+        "Washington State"="wa",
+        "King County"="kingco"
+    )
+)
+
 map_panel <- tabPanel(
     "Map Plot",
     sidebarPanel(
-        map_select
+        map_select,
+        map_shape_select
     ),
     mainPanel(
         plotlyOutput("map")

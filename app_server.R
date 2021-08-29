@@ -25,10 +25,11 @@ server <- function(input, output) {
     output$map <- renderPlotly({
         # Select data widget
         map_data <- get(input$map_select)
+        map_shape <- get(input$map_shape_select)
 
         # Plot
         map.plot <- ggplot() +
-            geom_polygon(data=wa,
+            geom_polygon(data=map_shape,
                          aes(x=long, y=lat, group=group),
                          alpha=0.3,
                          fill="#89ce61") +
