@@ -1,5 +1,9 @@
 # harvest-against-hunger
-The objective of this project is to build data visualizations to showcase the impact of the King County Farmers Share program, as well as to provide Harvest Against Hunger a scalable template to showcase other programs in the future. The visualizations will primarily consist of geographical and change-over-time data.
+The objective of this project is to bring visibility to Harvest Against Hunger, a non-profit hunger relief organization.
+
+Specifically, through interactive data visualizations, this project will showcase the impact of its King County Farmers Share program. The visualizations will primarily consist of geographical and change-over-time data. These will also provide this organization a scalable template to showcase future programs.
+
+Ultimately, this project will help Harvest Against Hunger advance its goals of connecting farmers, truckers, volunteers and food banks to reduce hunger and food waste.
 
 ## Deliverables
 0. [Project Plan](https://docs.google.com/document/d/1Sojg5kTlZZ5urzm4aZR27VEBhX6-xmbT7d9Q6ZgS70M/edit?usp=sharing)
