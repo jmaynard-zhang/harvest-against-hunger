@@ -1,5 +1,7 @@
 # FUNCTIONS
 
+# Installs all packages needed for the code to run.
+
 # Loads all packages needed for the code to run.
 load_pckg <- function() {
   # Data compilation
@@ -11,12 +13,12 @@ load_pckg <- function() {
   library(data.table)
   library(stringr)
   library(stringi)
+  library(anytime)
 
   # Data filtering
   library(rgdal)
 
   # Visualizations
-  library(lubridate)
   library(ggplot2)
   library(RColorBrewer)
   library(writexl)

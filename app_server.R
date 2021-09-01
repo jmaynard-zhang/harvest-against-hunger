@@ -37,7 +37,7 @@ server <- function(input, output) {
                        aes(x=lon,
                            y=lat,
                            alpha=total,
-                           text=paste("farm:", `Farm Name`)),
+                           text=paste("farm:", Farm.Name)),
                        color="dark green") +
             theme_void() +
             coord_map() +
