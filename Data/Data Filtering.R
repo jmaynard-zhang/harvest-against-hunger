@@ -58,9 +58,16 @@ df <- df %>%
 kingco <- readOGR(dsn="Data/kingco_shapefile/King_County_with_Natural_Shoreline_for_Puget_Sound_and_Lake_Washington___kingsh_area.shp")
 wa <- map_data("county", "washington")
 
-# Remove farms with no locations in King County
+# Remove farms with locations that are a) unknown or b) outside of King county.
+remove_farms <- c("Lily Fields",
+                  "High & Dry Farm",
+                  "Orange Star Farm",
+                  "Caruso Farm",
+                  "Skylight Farms",
+                  "Lowlands Farm")
 df_map <- df %>%
-  filter(!(Farm.Name == "Lily Fields"))
+  filter(!(Farm.Name %in% remove_farms))
+
 
 # -- Total Orders --
 `Total Orders` <- df_map %>%
