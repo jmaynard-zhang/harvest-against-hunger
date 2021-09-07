@@ -9,6 +9,7 @@ server <- function(input, output) {
         line.plot <- plot_ly(line_data,
                              x = line_data[[1]],
                              y = line_data[[3]],
+                             type='scatter',
                              mode="lines",
                              line=list(color="#89ce61")) %>%
             layout(

@@ -1,176 +1,92 @@
 # DATA COMPILATION
 
-# -- Load packages --
+# -- Load packages and data --
 load_pckg()
+df <- read.csv("Data/dataframe.csv")
+funds <- read.csv("Data/funds_dataframe.csv")
+
+# ~~ LINE DATA ~~
+# -- Num farms served --
+`Number of Farms Served Monthly` <- df %>%
+  select(Farm.Name, order_month) %>%
+  unique() %>%
+  group_by(order_month) %>%
+  summarize(num_farms=n()) %>%
+  mutate(num_farms_cum=cumsum(num_farms)) %>%
+  na.omit()
 
 
-# -- Load data --
-# # KCFS 2019
-# X19_list <- list()
-# X19_programs <- excel_sheets(path="./Data/KCFS 2019.xlsx")
-# sheets <- 3:length(X19_programs)
-# for (i in sheets) {
-#   temp <- read_excel("./Data/KCFS 2019.xlsx",
-#                      skip = 2,
-#                      sheet = X19_programs[i])
-#   X19_list[[i - 2]] <- temp
-# }
-#
-# # KCFS 2020
-# X20_list <- list()
-# X20_programs <- excel_sheets(path="./Data/KCFS 2020.xlsx")
-# sheets <- 2:length(X19_programs)
-# for (i in sheets) {
-#   temp <- read_excel("./Data/KCFS 2020.xlsx",
-#                      skip = 3,
-#                      sheet = X20_programs[i])
-#   X20_list[[i - 1]] <- temp
-# }
-#
-# # CARES
-# cares.list <- list()
-# cares_programs <- excel_sheets(path="./Data/CARES.xlsx")
-# sheets <- 2:length(cares_programs)
-# for (i in sheets) {
-#   temp <- read_excel("./Data/CARES.xlsx",
-#                      skip = 1,
-#                      sheet = cares_programs[i])
-#   cares.list[[i - 1]] <- temp
-# }
-
-# KCFS Funds
-funds <- read_excel("./Data/KCFS $.xlsx") %>%
-  pivot_longer(!Organization,
-               names_to="year",
-               values_to="funds_dispersed") %>%
-  mutate(year=as.Date(ISOdate(year, 1, 1)))
+# -- Num orders --
+`Number of Orders Monthly` <- df %>%
+  select(Farm.Name, order_month) %>%
+  group_by(order_month) %>%
+  summarize(num_orders=n()) %>%
+  mutate(num_orders_cum=cumsum(num_orders)) %>%
+  na.omit()
 
 
-# -- Select & Filter --
-# # Append lists
-# X19_list <- X19_list %>%
-#   lapply(rename, `Order Date` = `Contract Date`)
-# x <- c()
-# for (i in 1:length(X19_list)) {
-#   temp_cols <- colnames(X19_list[[i]])
-#   temp_df <- X19_list[[i]]
-#
-#   if ("Contract Amount" %in% temp_cols) {
-#     X19_list[[i]] <- temp_df %>%
-#     rename(`Order Amount ($)` = `Contract Amount`)
-#   } else if ("\r\nContract Amount" %in% temp_cols) {
-#     X19_list[[i]] <- temp_df %>%
-#     rename(`Order Amount ($)` = `\r\nContract Amount`)
-#   } else {
-#     x <- append(x, i)
-#   }
-# }
-#
-# list <- append(X19_list, X20_list)
-# list <- append(list, cares.list)
-# ## Select relevant columns
-# list <- list %>%
-#   lapply(select, `Farm Name`,
-#          `Order Date`,
-#          `Pounds purchased`,
-#          `Order Amount ($)`
-#          )
-# ## Filter out "Totals"
-# list <- list %>%
-#   lapply(subset, `Farm Name` != "Totals")
-#
-#
-# # -- Small Fixes --
-# ## Filter out empty dfs
-# list <- list[lapply(list, nrow) > 0]
-# for (i in 1:length(list)) {
-#   curr = list[[i]]
-#
-#   ## Order Date to consistent date format
-#   if (typeof(curr$`Order Date`) == "character") {
-#     list[[i]]$`Order Date` = as.Date(
-#       as.numeric(curr$`Order Date`), origin = "1899-12-30")
-#   } else {
-#     list[[i]]$`Order Date` = as.Date(curr$`Order Date`)
-#   }
-# }
-#
-#
-# # -- Merge lists --
-# df <- rbindlist(list)
+# -- Order amount ($) --
+`Order Amount ($) Monthly` <- df %>%
+  select(order_month, Order.Amount) %>%
+  group_by(order_month) %>%
+  summarize(`Total Order Amount ($)`=sum(Order.Amount, na.rm=T)) %>%
+  mutate(cumulative=cumsum(`Total Order Amount ($)`)) %>%
+  na.omit()
 
 
-# # -- Fixing `Pounds purchased` --
-# # Remove unnecessary numbers by removing everything after the '=', '(', and
-# # '$' signs (inclusive)
-# remove <- "\\(.*|=.*|\\$.*| +$"
-# df_fix_lbs <- df %>%
-#   mutate(`Pounds purchased`=gsub(pattern=remove,
-#                                  replacement = "",
-#                                  df$`Pounds purchased`))
-# # # Extract the first number of each cell
-# # df <- df %>%
-# #   mutate(`Pounds purchased`=stri_extract_first_regex(`Pounds purchased`,
-# #                                                      "[0-9]+"))
-# # Replace non-numbers with spaces
-# remove2 <- "[^0-9.-]"
-# df_fix_lbs <- df_fix_lbs %>%
-#   mutate(`Pounds purchased`=gsub(pattern=remove2,
-#                                  replacement = " ",
-#                                  df_fix_lbs$`Pounds purchased`))
-# # Trim whitespace
-# df_fix_lbs <- df_fix_lbs %>%
-#   mutate(`Pounds purchased`=str_trim(str_squish(df_fix_lbs$`Pounds purchased`)))
-# # Replace spaces with `+`
-# df_fix_lbs <- df_fix_lbs %>%
-#   mutate(`Pounds purchased`=gsub(pattern=" ",
-#                                  replacement="+",
-#                                  df_fix_lbs$`Pounds purchased`))
-# # Add numbers together in excel
-# write.csv(df_fix_lbs, "./Data/fix_pounds_purchased.csv", row.names = F)
-
-# -- Compiled 2019-2020 KCFS + CARES data, with pounds purchased fixed --
-df <- read.csv("./Data/fix_pounds_purchased.csv") %>%
-  # Char to num type
-  mutate(`Pounds.Purchased`=as.numeric(`Pounds.Purchased`)) %>%
-  # Char to date type
-  mutate(Order.Date=anydate(Order.Date)) %>%
-  # Rename Order.Date
-  rename(Order.Amount=Order.Amount....)
+# -- Amount purchased (lb) --
+`Pounds Purchased Monthly` <- df %>%
+  select(order_month, Pounds.Purchased) %>%
+  group_by(order_month) %>%
+  summarize(`Total Pounds Purchased`=sum(Pounds.Purchased, na.rm=T)) %>%
+  mutate(cumulative=cumsum(`Total Pounds Purchased`)) %>%
+  na.omit()
 
 
-# -- Fix misspelled farm names --
-farms <- df %>%
-  select() %>%
-  unique()
-
-correct_farms <- read_xlsx(path="./Data/correct_farm_names.xlsx")
-
-# Join main df with fixed farm names
-df <- df %>%
-  left_join(correct_farms, by=c("Farm.Name"="Farm Name"))
-
-# Remove the old farm names column
-df <- df %>%
-  select(-Farm.Name)
-
-# Rename fixed farm names column to "Farm.Name"
-df <- df %>%
-  rename(Farm.Name=`Correct Farm Name`)
+# -- Funds disbursed ($) --
+`Funds Disbursed ($) Yearly` <- funds %>%
+  group_by(year) %>%
+  summarize(total_funds=sum(funds_dispersed, na.rm = T)) %>%
+  mutate(total_funds_cum=cumsum(total_funds)) %>%
+  na.omit()
 
 
-# -- Add coords to the df --
-farm_coords <- read_xlsx("./Data/farm_coords.xlsx")
+# ~~ MAP DATA ~~
+# -- Set up map --
+kingco <- readOGR(dsn="Data/kingco_shapefile/King_County_with_Natural_Shoreline_for_Puget_Sound_and_Lake_Washington___kingsh_area.shp")
+wa <- map_data("county", "washington")
 
-df <- df %>%
-  left_join(farm_coords)
+# Remove farms with locations that are a) unknown or b) outside of King county.
+remove_farms <- c("Lily Fields",
+                  "High & Dry Farm",
+                  "Orange Star Farm",
+                  "Caruso Farm",
+                  "Skylight Farms",
+                  "Lowlands Farm")
+df_map <- df %>%
+  filter(!(Farm.Name %in% remove_farms))
 
-# Separate coords into lat & long
-df <- df %>%
-  mutate(lat = as.numeric(gsub("^(.*?),.*", "\\1", Coordinates)),
-        lon = as.numeric(sub("^.*?,", "", Coordinates)))
+
+# -- Total Orders --
+`Total Orders` <- df_map %>%
+  select(Farm.Name, Order.Date, lat, lon) %>%
+  group_by(Farm.Name, lat, lon) %>%
+  summarize(total=n()) %>%
+  na.omit()
 
 
-# -- Add Order Month column --
-df <- df %>%
-  mutate(order_month=lubridate::floor_date(Order.Date, "month"))
+# -- Total Order Amount ($) --
+`Total Order Amount ($)` <- df_map %>%
+  select(Farm.Name, Order.Amount, lat, lon) %>%
+  group_by(Farm.Name, lat, lon) %>%
+  summarize(total=sum(Order.Amount)) %>%
+  na.omit()
+
+
+# -- Total Pounds Purchased --
+`Total Pounds Purchased` <- df_map %>%
+  select(Farm.Name, Pounds.Purchased, lat, lon) %>%
+  group_by(Farm.Name, lat, lon) %>%
+  summarize(total=sum(Pounds.Purchased)) %>%
+  na.omit()
+
