@@ -2,33 +2,33 @@
 
 # -- Load packages and data --
 load_pckg()
-df <- read.csv("Data/dataframe.csv")
-funds <- read.csv("Data/funds_dataframe.csv")
+df <- read_csv("Data/dataframe.csv")
+funds <- read_csv("Data/funds_dataframe.csv")
 
 # ~~ LINE DATA ~~
 # -- Num farms served --
 `Number of Farms Served Monthly` <- df %>%
-  select(Farm.Name, order_month) %>%
+  select(Farm.Name, order_date) %>%
   unique() %>%
-  group_by(order_month) %>%
+  group_by(order_date) %>%
   summarize(num_farms=n()) %>%
-  mutate(num_farms_cum=cumsum(num_farms)) %>%
+  mutate(cumulative=cumsum(num_farms)) %>%
   na.omit()
 
 
 # -- Num orders --
 `Number of Orders Monthly` <- df %>%
-  select(Farm.Name, order_month) %>%
-  group_by(order_month) %>%
+  select(Farm.Name, order_date) %>%
+  group_by(order_date) %>%
   summarize(num_orders=n()) %>%
-  mutate(num_orders_cum=cumsum(num_orders)) %>%
+  mutate(cumulative=cumsum(num_orders)) %>%
   na.omit()
 
 
 # -- Order amount ($) --
 `Order Amount ($) Monthly` <- df %>%
-  select(order_month, Order.Amount) %>%
-  group_by(order_month) %>%
+  select(order_date, Order.Amount) %>%
+  group_by(order_date) %>%
   summarize(`Total Order Amount ($)`=sum(Order.Amount, na.rm=T)) %>%
   mutate(cumulative=cumsum(`Total Order Amount ($)`)) %>%
   na.omit()
@@ -36,8 +36,8 @@ funds <- read.csv("Data/funds_dataframe.csv")
 
 # -- Amount purchased (lb) --
 `Pounds Purchased Monthly` <- df %>%
-  select(order_month, Pounds.Purchased) %>%
-  group_by(order_month) %>%
+  select(order_date, Pounds.Purchased) %>%
+  group_by(order_date) %>%
   summarize(`Total Pounds Purchased`=sum(Pounds.Purchased, na.rm=T)) %>%
   mutate(cumulative=cumsum(`Total Pounds Purchased`)) %>%
   na.omit()
@@ -45,9 +45,9 @@ funds <- read.csv("Data/funds_dataframe.csv")
 
 # -- Funds disbursed ($) --
 `Funds Disbursed ($) Yearly` <- funds %>%
-  group_by(year) %>%
+  group_by(order_date) %>%
   summarize(total_funds=sum(funds_dispersed, na.rm = T)) %>%
-  mutate(total_funds_cum=cumsum(total_funds)) %>%
+  mutate(cumulative=cumsum(total_funds)) %>%
   na.omit()
 
 
@@ -69,7 +69,7 @@ df_map <- df %>%
 
 # -- Total Orders --
 `Total Orders` <- df_map %>%
-  select(Farm.Name, Order.Date, lat, lon) %>%
+  select(Farm.Name, order_date, lat, lon) %>%
   group_by(Farm.Name, lat, lon) %>%
   summarize(total=n()) %>%
   na.omit()

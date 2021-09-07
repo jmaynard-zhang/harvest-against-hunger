@@ -39,7 +39,7 @@ load_pckg()
 # }
 
 # KCFS Funds
-funds <- read_excel("./Data/KCFS $.xlsx") %>%
+funds <- read_excel("./Data/Original Data/KCFS $.xlsx") %>%
   pivot_longer(!Organization,
                names_to="year",
                values_to="funds_dispersed") %>%
@@ -174,6 +174,13 @@ df <- df %>%
 # -- Add Order Month column --
 df <- df %>%
   mutate(order_month=lubridate::floor_date(Order.Date, "month"))
+
+# Rename columns
+df <- df %>%
+  rename(order_date=order_month)
+
+funds <- funds %>%
+  rename(order_date=year)
 
 # -- DF to csv --
 write.csv(df, "./Data/dataframe.csv", row.names = F)

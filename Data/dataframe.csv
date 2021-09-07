@@ -1,4 +1,4 @@
-"Order.Date","Pounds.Purchased","Order.Amount","Farm.Name","Coordinates","lat","lon","order_month"
+"Order.Date","Pounds.Purchased","Order.Amount","Farm.Name","Coordinates","lat","lon","order_date"
 2019-06-13,20,160,"Northbourne Farm","47.4565606,-122.4511177",47.4565606,-122.4511177,2019-06-01
 2019-07-02,10,80,"Forest Garden Farm","47.4794336,-122.4706857",47.4794336,-122.4706857,2019-07-01
 2019-07-11,90,270,"Matsuda Farm","47.4323906,-122.4666727",47.4323906,-122.4666727,2019-07-01

@@ -3,12 +3,11 @@ server <- function(input, output) {
     output$line <- renderPlotly({
         # Select data widget
         line_data <- get(input$line_select)
-        y_col <- colnames(data)[[3]]
 
         # Plot
         line.plot <- plot_ly(line_data,
-                             x = line_data[[1]],
-                             y = line_data[[3]],
+                             x = line_data$order_date,
+                             y = line_data$cumulative,
                              type='scatter',
                              mode="lines",
                              line=list(color="#89ce61")) %>%
