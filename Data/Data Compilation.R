@@ -79,7 +79,7 @@ df_map <- df %>%
 `Total Order Amount ($)` <- df_map %>%
   select(Farm.Name, Order.Amount, lat, lon) %>%
   group_by(Farm.Name, lat, lon) %>%
-  summarize(total=sum(Order.Amount)) %>%
+  summarize(total=sum(Order.Amount, na.rm = T)) %>%
   na.omit()
 
 
@@ -87,6 +87,6 @@ df_map <- df %>%
 `Total Pounds Purchased` <- df_map %>%
   select(Farm.Name, Pounds.Purchased, lat, lon) %>%
   group_by(Farm.Name, lat, lon) %>%
-  summarize(total=sum(Pounds.Purchased)) %>%
+  summarize(total=sum(Pounds.Purchased, na.rm = T)) %>%
   na.omit()
 
