@@ -189,14 +189,17 @@ non_num_to_plus <- function(df) {
   return(df)
 }
 
-# Returns a dataframe, removing all characters after the '=', '(', and '$' signs
-# (inclusive) from a given character type column.
+# Returns a dataframe with a single column of unique, alphabetically-sorted
+# farm names from given dataframe (for fixing farm names). COLUMN NAME MUST BE
+# `farm_name`.
+get_unq_farms <- function(df) {
+  df <- df %>%
+    select(farm_name) %>%
+    unique() %>%
+    arrange(farm_name)
 
-# Returns a dataframe, replacing all characters between each number in a
-# character type column with single '+' signs.
-
-# Returns a dataframe with a single column of unique names from given dataframe
-# column (for fixing farm names).
+  return(df)
+}
 
 # Returns a dataframe with coordinates from given dataframe separated into `lon`
 # and `lat` columns.
