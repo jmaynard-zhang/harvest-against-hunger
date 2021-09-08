@@ -65,7 +65,8 @@ remove_farms <- c(
   "Caruso Farm",
   "Skylight Farms",
   "Lowlands Farm",
-  "Tangled Willows Farm"
+  "Tangled Willows Farm",
+  "Flying Tomato Farm"
 )
 df_map <- df %>%
   filter(!(farm_name %in% remove_farms))
