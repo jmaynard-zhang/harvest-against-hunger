@@ -13,3 +13,5 @@ Ultimately, this project will help Harvest Against Hunger advance its goals of c
 2. [Static Visualization Web Page](https://jmaynard-zhang.github.io/harvest-against-hunger/)
 
 3. [Interactive Visualization Web Application](https://maynard-zhang-uw.shinyapps.io/harvest-against-hunger/)
+
+4. [Instructions for Extension](https://docs.google.com/document/d/1N3G8tIV8hCd-NOMY_C2SoOTfyKqDxVHdCUxSLwapzUY/edit?usp=sharing)
