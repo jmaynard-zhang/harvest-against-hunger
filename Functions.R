@@ -150,12 +150,6 @@ fix_lbs_purchased <- function(df) {
 #
 # df = dataframe
 strip_unnecessary <- function(df) {
-  # remove <- "\\(.*|=.*|\\$.*| +$"
-  #
-  # df <- df %>%
-  #   mutate(pounds_purchased=gsub(pattern=remove,
-  #                                  replacement = "",
-  #                                  df$pounds_purchased))
   remove <- "\\(.*|=.*|\\$.*| +$"
   return <- df %>%
     mutate(pounds_purchased=gsub(pattern=remove,
