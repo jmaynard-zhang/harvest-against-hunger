@@ -192,6 +192,8 @@ non_num_to_plus <- function(df) {
 # Returns a dataframe with a single column of unique, alphabetically-sorted
 # farm names from given dataframe (for fixing farm names). COLUMN NAME MUST BE
 # `farm_name`.
+#
+# df = dataframe
 get_unq_farms <- function(df) {
   df <- df %>%
     select(farm_name) %>%
@@ -202,6 +204,15 @@ get_unq_farms <- function(df) {
 }
 
 # Returns a dataframe with coordinates from given dataframe separated into `lon`
-# and `lat` columns.
+# and `lat` columns. COLUMN NAME MUST BE `coordinates`.
+#
+# df = dataframe
+sep_coords <- function(df) {
+  df <- df %>%
+    mutate(lat = as.numeric(gsub("^(.*?),.*", "\\1", coordinates)),
+          lon = as.numeric(sub("^.*?,", "", coordinates)))
+
+  return(df)
+}
 
 # Returns a dataframe, replacing the order date column with order month data.

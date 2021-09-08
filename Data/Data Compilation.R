@@ -3,8 +3,6 @@
 # -- Load packages and data --
 load_pckg()
 df <- read_csv("Data/dataframe.csv")
-df$order_date = as.Date(
-  as.numeric(df$order_date), origin = "1899-12-30")
 funds <- read_csv("Data/funds_dataframe.csv")
 
 # ~~ LINE DATA ~~
