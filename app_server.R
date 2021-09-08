@@ -44,7 +44,7 @@ server <- function(input, output) {
           x = lon,
           y = lat,
           alpha = total,
-          text = paste("farm:", Farm.Name)
+          text = paste("farm:", farm_name)
         ),
         color = "dark green"
       ) +
