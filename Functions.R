@@ -216,3 +216,12 @@ sep_coords <- function(df) {
 }
 
 # Returns a dataframe, replacing the order date column with order month data.
+# COLUMN NAME MUST BE `order_date`.
+#
+# df = dataframe
+get_order_month <- function(df) {
+  df <- df %>%
+    mutate(order_month=lubridate::floor_date(order_date, "month"))
+
+  return(df)
+}
