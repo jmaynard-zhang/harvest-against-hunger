@@ -1,3 +1,8 @@
+# Credits
+credits <- HTML('<footer>
+          Visualizations designed and built by Maynard Maynard-Zhang.
+         </footer>')
+
 # Vis 1 - Line
 line_select <- selectInput(
   inputId = "line_select",
@@ -17,7 +22,8 @@ line_panel <- tabPanel(
     line_select
   ),
   mainPanel(
-    plotlyOutput("line")
+    plotlyOutput("line"),
+    credits
   )
 )
 
@@ -48,7 +54,8 @@ map_panel <- tabPanel(
     map_shape_select
   ),
   mainPanel(
-    plotlyOutput("map")
+    plotlyOutput("map"),
+    credits
   )
 )
 
