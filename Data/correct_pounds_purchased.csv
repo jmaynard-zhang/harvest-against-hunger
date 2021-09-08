@@ -1,0 +1,729 @@
+farm_name,order_date,pounds_purchased,order_amount
+Northbourne Farm,6/13/2019,20,160
+Forest Garden Farm,7/2/2019,10,80
+Matsuda Farm,7/11/2019,90,270
+Provo Farms,7/15/2019,60,240
+Provo Farms,7/22/2019,40,160
+Matsuda Farm,8/5/2019,100,181
+Provo Farms,8/6/2019,50,150
+Provo Farms,8/21/2019,35,99.75
+Matsuda Farm,9/12/2019,71,50
+Provo Farms,10/1/2019,15.5,46.5
+Forest Garden Farm,10/9/2019,44,110
+Northbourne Farm,10/16/2019,185,200
+Matsuda Farm,10/28/2019,25,100
+Matsuda Farm,12/16/2019,61.1,152.75
+Lily's Fields,5/16/2019,20,2000
+Lily's Fields,5/16/2019,20,NA
+Lily's Fields,5/16/2019,10,NA
+Lily's Fields,5/16/2019,10,NA
+Lily's Fields,5/16/2019,30,NA
+Lily's Fields,5/16/2019,12,NA
+Lily's Fields,5/16/2019,15,NA
+Lily's Fields,5/16/2019,10,NA
+Lily's Fields,5/16/2019,20,NA
+Lily's Fields,5/16/2019,15,NA
+Lily's Fields,5/16/2019,5,NA
+Lily's Fields,5/16/2019,5,NA
+Lily's Fields,5/16/2019,15,NA
+Lily's Fields,5/16/2019,20,NA
+Lily's Fields,5/16/2019,15,NA
+Lily's Fields,5/16/2019,7,NA
+Lily's Fields,5/16/2019,10,NA
+Lily's Fields,5/16/2019,11,NA
+Lily's Fields,5/16/2019,30,NA
+Lily's Fields,5/16/2019,7,NA
+Small Blessing Farm,5/16/2019,18,NA
+Small Blessing Farm,5/16/2019,24,NA
+Lily's Fields,5/16/2019,30,NA
+Lily's Fields,5/16/2019,15,NA
+Lily's Fields,5/16/2019,20,NA
+Lily's Fields,5/16/2019,10,NA
+Small Blessing Farm,5/16/2019,18,NA
+Small Blessing Farm,5/16/2019,25,NA
+Small Blessing Farm,5/16/2019,25,NA
+Small Blessing Farm,5/16/2019,25,NA
+Lily's Fields,9/4/2019,24,NA
+Lily's Fields,10/1/2019,25,NA
+Lily's Fields,10/16/2019,25,NA
+Lily's Fields,10/16/2019,25,NA
+Lily's Fields,10/16/2019,50,NA
+Lily's Fields,10/21/2019,25,NA
+Lily's Fields,10/21/2019,20,NA
+Lily's Fields,10/21/2019,16,NA
+FaithBeyond Farm,NA,138,2000
+FaithBeyond Farm,NA,48,2000
+FaithBeyond Farm,NA,52,2000
+FaithBeyond Farm,NA,50,2000
+FaithBeyond Farm,NA,89,2000
+FaithBeyond Farm,NA,75,2000
+FaithBeyond Farm,NA,30,2000
+FaithBeyond Farm,NA,50,2000
+FaithBeyond Farm,NA,25,2000
+FaithBeyond Farm,NA,25,2000
+FaithBeyond Farm,NA,50,2000
+FaithBeyond Farm,NA,30,2000
+FaithBeyond Farm,NA,25,2000
+FaithBeyond Farm,NA,25,2000
+FaithBeyond Farm,NA,25,2000
+FaithBeyond Farm,NA,20,2000
+FaithBeyond Farm,NA,12.5,2000
+FaithBeyond Farm,NA,20,2000
+FaithBeyond Farm,NA,15,2000
+FaithBeyond Farm,NA,37.5,2000
+FaithBeyond Farm,NA,15,2000
+FaithBeyond Farm,NA,20,2000
+Namuna Growers,NA,19,500
+Namuna Growers,NA,3,500
+Namuna Growers,NA,3.75,500
+Namuna Growers,NA,17,500
+Namuna Growers,NA,2,500
+Namuna Growers,NA,15,500
+Namuna Growers,NA,25,500
+Namuna Growers,NA,22.5,500
+Namuna Growers,NA,24,500
+Namuna Growers,NA,6,500
+Namuna Growers,NA,18.5,500
+Namuna Growers,NA,25,500
+Namuna Growers,NA,10,500
+Namuna Growers,NA,30,500
+Namuna Growers,NA,24,500
+Namuna Growers,NA,10,500
+Namuna Growers,NA,15,500
+Namuna Growers,NA,6,500
+Namuna Growers,NA,6.5,500
+Namuna Growers,NA,1.25,500
+Namuna Growers,NA,0.75,500
+Namuna Growers,NA,15,500
+Namuna Growers,NA,37,500
+Namuna Growers,NA,9,500
+Namuna Growers,NA,6,500
+Namuna Growers,NA,20,500
+Windy Acre Farm,NA,120,2000
+Windy Acre Farm,NA,100,2000
+Windy Acre Farm,NA,100,2000
+Windy Acre Farm,NA,200,2000
+Windy Acre Farm,NA,50,2000
+Windy Acre Farm,NA,50,2000
+Windy Acre Farm,NA,200,2000
+Windy Acre Farm,NA,45,2000
+Oxbow Farm,7/31/2019,120,197.1
+Oxbow Farm,8/7/2019,130,196.2
+Oxbow Farm,8/14/2019,140,198
+Oxbow Farm,8/21/2019,160,198
+Oxbow Farm,8/28/2019,160,198
+Oxbow Farm,9/4/2019,170,198.9
+Oxbow Farm,9/11/2019,160,198.9
+Oxbow Farm,9/18/2019,130,198.9
+Oxbow Farm,9/25/2019,120,198.9
+Oxbow Farm,10/2/2019,90,133.2
+Oxbow Farm,10/16/2019,140,197.1
+Oxbow Farm,10/30/2019,120,199.35
+Oxbow Farm,11/5/2019,90,166.05
+Oxbow Farm,11/13/2019,100,191.25
+Oxbow Farm,11/20/2019,90,179.1
+Oxbow Farm,12/3/2019,80,151.05
+Oxbow Farm,10/2/2019,325,249.75
+Oxbow Farm,10/9/2019,225,249.75
+Oxbow Farm,10/16/2019,220,314.55
+Oxbow Farm,10/30/2019,189,249.52
+Oxbow Farm,11/6/2019,200,245.25
+Oxbow Farm,11/13/2019,310,250.2
+Oxbow Farm,11/20/2019,172,240.3
+Oxbow Farm,12/4/2019,180,240.75
+Oxbow Farm,12/11/2019,115,238.5
+Oxbow Farm,12/18/2019,115,229.5
+Clean Greens,5/7/2019,#NAME?,5500
+Clean Greens,5/7/2019,145,5500
+Clean Greens,5/7/2019,150,5500
+Clean Greens,5/7/2019,200,5500
+Clean Greens,5/7/2019,420,5500
+Clean Greens,5/7/2019,170,5500
+Clean Greens,5/7/2019,210,5500
+Clean Greens,5/7/2019,200,5500
+Clean Greens,5/7/2019,250,5500
+Clean Greens,5/7/2019,200,5500
+Clean Greens,5/7/2019,150,5500
+Clean Greens,5/7/2019,83,5500
+Clean Greens,5/7/2019,181,5500
+Clean Greens,5/7/2019,240,5500
+Farmstand Local,NA,#NAME?,3000
+Caruso Farm,NA,35,NA
+Oxbow,NA,120,NA
+Skylight Farms,NA,25,NA
+High & Dry Farm,NA,12,NA
+Sound Vegetables,NA,96,NA
+Caruso Farm,NA,50,NA
+Lowlands Farm,NA,60,NA
+Skylight Farms,NA,10,NA
+Skylight Farms,NA,60,NA
+Skylight Farms,NA,10,NA
+Skylight Farms,NA,80,NA
+Skylight Farms,NA,40,NA
+Skylight Farms,NA,50,NA
+Steel Wheel Farm,NA,50,NA
+Flying Tomato Farm,NA,5,NA
+Lowlands Farm,NA,80,NA
+Orange Star Farm,NA,200,NA
+Orange Star Farm,NA,20,NA
+Oxbow,NA,60,NA
+Regeneration Farm,NA,10,NA
+Skylight Farms,NA,5,NA
+Tualco Valley Farm,NA,10,NA
+Flying Tomato Farm,NA,5,NA
+Lowlands Farm,NA,80,NA
+Orange Star Farm,NA,200,NA
+Orange Star Farm,NA,20,NA
+Oxbow,NA,60,NA
+Regeneration Farm,NA,10,NA
+Skylight Farms,NA,5,NA
+Tualco Valley Farm,NA,10,NA
+Alki Market Garden,NA,10,NA
+Caruso Farm,NA,10,NA
+Caruso Farm,NA,40,NA
+Caruso Farm,NA,100,NA
+Faith Beyond Farm,NA,84,NA
+Hima Farms,NA,90,NA
+Oxbow,NA,72,NA
+Skylight Farms,NA,40,NA
+Sound Vegetables,NA,40,NA
+Tualco Valley Farm,NA,20,NA
+Tualco Valley Farm,NA,20,NA
+Faith Beyond Farm,NA,10,NA
+Radicle Roots Farm,NA,10,NA
+Steel Wheel Farm,NA,48,NA
+Steel Wheel Farm,NA,60,NA
+Tualco Valley Farm,NA,40,NA
+Tualco Valley Farm,NA,40,NA
+Caruso Farm,NA,100,NA
+Oxbow,NA,96,NA
+Regeneration Farm,NA,5,NA
+Skylight Farms,NA,40,NA
+Steel Wheel Farm,NA,200,NA
+Summer Run Farm,NA,30,NA
+Tualco Valley Farm,NA,10,NA
+Lee's Fresh Produce,7/3/2019,160,500
+"
+Cascadia Greens",5/1/2019,175,262.5
+Frisky Girl,11/1/2019,75,150
+Tonnemaker Hill Farm*,11/1/2019,50,50
+Tonnemaker Hill Farm*,11/1/2019,20,45
+Sales & Distribution facility in KC,11/1/2019,20,45
+Local Roots Farm,9/11/2019,230,217
+Local Roots Farm,10/16/2019,400,500
+Oxbow Farm,10/16/2019,120,193.5
+Oxbow Farm,10/16/2019,256,288
+Oxbow Farm,10/16/2019,199,276.75
+Oxbow Farm,10/16/2019,200,270
+Oxbow Farm,10/16/2019,575,852.75
+Carnation Farms,10/25/2019,500,1000
+Local Roots Farm,11/6/2019,95,191.19
+Steel Wheel Farm,11/6/2019,782,1202
+Oxbow Farm,11/6/2019,462,693.9
+Oxbow Farm,11/6/2019,229,253.8
+Oxbow Farm,11/6/2019,575,753.75
+Oxbow Farm,11/13/2019,297,491.4
+Oxbow Farm,11/13/2019,489,562.05
+Oxbow Farm,11/13/2019,196,268.2
+Oxbow Farm,11/13/2019,110,297
+Clean Greens,11/15/2019,358,358
+Carnation Farms,11/22/2019,#NAME?,500
+Steel Wheel Farm,12/2/2019,538,831
+Local Roots,8/5/2020,400,800
+Terrebonne Truck Patch,9/14/2020,255,382.5
+Terrebonne Truck Patch,9/21/2020,225,817.5
+Oxbow Farm,9/23/2020,100,385.2
+Carnation Farms,9/23/2020,20,100
+Carnation Farms,9/23/2020,10,148
+Carnation Farms,9/30/2020,40,382.5
+Steel Wheel Farm,10/6/2020,120,757.75
+Carnation Farms,10/8/2020,80,412.5
+Terrebonne Truck Patch,10/14/2020,467,467
+Oxbow Farm,10/14/2020,50,239.4
+Carnation Farms,10/14/2020,80,532.5
+Carnation Farms,10/14/2020,52.5,330
+Steel Wheel Farm,10/14/2020,40,306.72
+Carnation Farms,10/21/2020,80,448.75
+Terrebonne Truck Patch,10/26/2020,154,231
+Terrebonne Truck Patch,10/26/2020,300,450
+Oxbow Farm,10/28/2020,240,324
+Oxbow Farm,10/28/2020,125,513
+Terrebonne Truck Patch,10/28/2020,408,837
+Terrebonne Truck Patch,11/4/2020,265.6,240
+Terrebonne Truck Patch,11/9/2020,87.5,360
+Oxbow Farm,11/11/2020,25,136.8
+Oxbow Farm,11/11/2020,100,922.5
+Sound Sustainable Farms,11/13/2020,200,1306
+Sound Sustainable Farms,11/16/2020,5.6,582
+Sound Sustainable Farms,11/16/2020,20,612
+Carnation Farms,11/17/2020,#NAME?,384
+Oxbow Farm,11/18/2020,300,202.5
+Carnation Farms,11/29/2020,26.25,432
+Carnation Farms,12/1/2020,48,1051
+Terrebonne Truck Patch,12/2/2020,200,435
+Oxbow Farm,12/3/2020,180,121.5
+Oxbow Farm,12/3/2020,250,558
+Carnation Farms,12/8/2020,20,538
+Local Roots Farm,12/9/2020,100,400
+Steel Wheel Farm,12/13/2020,200,1218.6
+Terrebonne Truck Patch,12/14/2020,65.5,270
+Steel Wheel Farm,12/30/2020,40,627.23
+Sound Sustainable Farms,8/21/2020,80,382
+Sound Sustainable Farms,8/28/2020,#NAME?,424
+Sound Sustainable Farms,9/4/2020,40,218
+Sound Sustainable Farms,9/15/2020,30,446
+Sound Sustainable Farms,9/18/2020,60,458
+Sound Sustainable Farms,9/25/2020,50,352
+Sound Sustainable Farms,10/2/2020,80,424
+Sound Sustainable Farms,10/9/2020,150,456
+Sound Sustainable Farms,10/16/2020,80,527
+Sound Sustainable Farms,10/23/2020,50,651
+Sound Sustainable Farms,10/30/2020,40,394
+Sound Sustainable Farms,11/6/2020,125,341
+Sound Sustainable Farms,11/13/2020,40,288
+Kamayan Farm,9/8/2020,50,200
+Sound Sustainable Farms,9/8/2020,50,200
+Sound Vegetables,9/8/2020,10,33.75
+Steel Wheel Farm,9/10/2020,20,113.76
+Oxbow Farm,9/10/2020,10,25
+Kamayan Farm,9/22/2020,20,62.5
+Carnation Farms,9/24/2020,10,58.12
+Oxbow Farm,9/24/2020,20,50
+Steel Wheel Farm,9/24/2020,30,105
+Carnation Farms,10/1/2020,150,290
+Steel Wheel Farm,10/1/2020,60,135
+Matsuda Farm,10/6/2020,112,150
+Matsuda Farm,10/13/2020,100,159.6
+Matsuda Farm,10/20/2020,300,280
+Matsuda Farm,10/27/2020,120,1110
+Matsuda Farm,11/3/2020,120,180
+Sno-Valley Mushrooms,5/21/2020,39,112.5
+Oxbow Farm,NA,55.5,75
+Faithbeyond Farm,6/12/2020,35,358.75
+Sound Sustainable Farm,NA,17.5,NA
+Oxbow Farm,NA,15.31,NA
+Tonnemaker,7/12/2020,40,129
+Lee Lor Garden,7/26/2020,17.5,162
+Lee Lor Garden,8/9/2020,28,111
+Carnation Farms,8/23/2020,36,81.4
+Terrebonne Truck Patch,7/17/2020,342,342
+Terrebonne Truck Patch,NA,175,535
+Terrebonne Truck Patch,7/10/2020,54.7,450
+Terrebonne Truck Patch,7/17/2020,228,342
+Terrebonne Truck Patch,8/7/2020,154,617.4
+Terrbonne Truck Patch,8/12/2020,105,432
+Terrbonne Truck Patch,8/14/2020,256,460.8
+Lee's Produce,7/14/2020,100,300
+Lee's Produce,8/4/2020,79,300
+Lee's Produce,NA,210,NA
+Lee's Produce,8/25/2020,150,300
+Lee's Produce,9/1/2020,240,300
+Lee's Produce,9/8/2020,240,300
+Lee's Produce,9/15/2020,100,300
+Lee's Produce,9/21/2020,125,300
+Lee's Produce,9/29/2020,256,300
+Lee's Produce,10/5/2020,470,300
+Lee's Produce,10/12/2020,470,300
+Wild Canary,7/21/2020,10,27.5
+Rising Sign Farm,7/17/2020,2,15
+Steel Wheel Farm,7/17/2020,15,225
+Alki Market Garden,7/14/2020,40,75
+Steel Wheel Farm,7/14/2020,48,67.5
+Rising Sign Farm,6/23/2020,24,75
+Summer Run Farm,6/19/2020,5,32.5
+Steel Wheel Farm,6/9/2020,36,112.5
+Sound Vegetables,5/26/2020,3,9
+Rising Sign Farm,5/26/2020,10,33.75
+Oxbow Farm,11/17/2020,25,170
+Steel Wheel Farm,11/17/2020,30,52.5
+Steel Wheel Farm,11/17/2020,30,56.25
+Steel Wheel Farm,11/17/2020,90,174.39
+Faithbeyond Farm,10/29/2020,24,120
+Faithbeyond Farm,10/29/2020,100,175
+Steel Wheel Farm,10/29/2020,12,58.75
+Steel Wheel Farm,10/23/2020,120,210
+Steel Wheel Farm,10/23/2020,60,206.25
+Steel Wheel Farm,10/23/2020,20,45
+Faithbeyond Farm,10/16/2020,100,218.75
+Oxbow Farm,10/16/2020,40,240
+Steel Wheel Farm,10/9/2020,40,125
+Steel Wheel Farm,10/9/2020,36,176.25
+Carnation Farms,10/2/2020,12,57.5
+Carnation Farms,10/2/2020,24,110
+Steel Wheel Farm,10/2/2020,60,112.5
+Steel Wheel Farm,10/2/2020,30,56.25
+Steel Wheel Farm,10/2/2020,15,50.63
+Carnation Farms,9/24/2020,12,55
+Steel Wheel Farm,9/24/2020,48,125
+Steel Wheel Farm,9/24/2020,70,245
+Carnation Farms,9/19/2020,24,52.5
+Steel Wheel Farm,9/19/2020,150,281.25
+Steel Wheel Farm,9/19/2020,20,68.75
+Steel Wheel Farm,9/19/2020,45,151.89
+Kamayan Farm,9/9/2020,12,60
+Oxbow Farm,9/9/2020,48,114
+Steel Wheel Farm,9/9/2020,120,225
+Oxbow Farm,8/12/2020,40,100
+Sound Vegetables,8/12/2020,20,87.5
+Steel Wheel Farm,8/5/2020,12,150
+Steel Wheel Farm,7/29/2020,30,62.5
+FaithBeyond Farm,6/9/2020,80,160
+Namuna Garden,6/11/2020,25,118.5
+Windy Acre Farm,8/11/2020,27.5,466
+Lily's Fields,6/30/2020,20,60.5
+Small Blessing Farms,7/15/2020,26,117
+Ayeko Farm,7/15/2020,30,94
+Lily Fields,7/15/2020,18,65.75
+Lily Fields,7/22/2020,12,NA
+Small Blessings Farms,7/22/2020,24,108
+Lily Fields,7/29/2020,20,103.75
+Lily Fields,8/5/2020,25,73.75
+Small Blessings Farm,NA,22,99
+Ayeko Farms,8/5/2020,34,102
+Small Blessings Farm,8/12/2020,26,117
+Ayeko Farms,8/12/2020,22,154
+Lily Fields,8/12/2020,20,106
+Ayeko Farms,9/30/2020,56,168
+Ayeko Farms,10/14/2020,5,20
+Faithbeyond Farms,10/21/2020,69,503.5
+Red Barn Organic Farms,10/21/2020,20,60
+Faithbeyond Farm,10/28/2020,25,357.5
+Red Barn Organic Farms,10/28/2020,20,66
+Red Barn Organic Farms,11/4/2020,15,60
+Faithbeyone Farm,11/4/2020,40,100
+Faithbeyone Farm,11/11/2020,59,421
+Faith Beyone Farm,11/17/2020,30,314.5
+Faith Beyond Farms,NA,40,217.5
+Northbourne Farm,7/28/2020,170,255
+Matsuda Farm,8/4/2020,100,250
+Sun Island Farm,8/5/2020,41,102.5
+Matsuda Farm,8/11/2020,60,120
+Linda Kozak,8/11/2020,#NAME?,79.8
+Northbourne Farm,8/17/2020,100,250
+Provo Farms,8/17/2020,50,500
+GreenMan Farm,8/17/2020,20,70
+Forest Garden Farm,8/17/2020,35,75
+Sun Island Farm,8/18/2020,38,76
+Gracie's Greens,8/18/2020,60,180
+Sacred Gorilla Farm,8/18/2020,10,107
+Forest Garden Farm,8/24/2020,20,75
+Matsuda Farm,8/25/2020,55.8,195.3
+Sacred Gorilla Farm,8/31/2020,12,226.75
+Provo Farms,8/31/2020,60,120
+Gracie's Greens,8/31/2020,60,340
+Provo Farms,9/1/2020,60,120
+Matsuda Farm,9/1/2020,40,100
+Sacred Gorilla Farm,9/7/2020,28,212
+Sun Island Farm,9/7/2020,60,240
+Matsuda Farm,9/8/2020,27,610.5
+Gracie's Greens,9/8/2020,60,545
+Sacred Gorilla Farm,9/14/2020,32,96
+Forest Garden Farm,9/14/2020,24,112
+Matsuda Farm,9/15/2020,30,408.4
+Gracie's Greens,9/15/2020,60,280
+Gracie's Greens,9/28/2020,45,431
+Matsuda Farm,9/29/2020,30,445
+Gracie's Greens,9/29/2020,#NAME?,296
+Matsuda Farm,10/6/2020,60,456
+Gracie's Greens,10/6/2020,11.5,106.5
+Matsuda Farm,10/13/2020,40,516
+Gracie's Greens,10/13/2021,#NAME?,180
+Matsuda Farm,10/20/2020,40,72
+Gracie's Greens,10/20/2020,40,164
+Nick Provo Farms,10/25/2020,#NAME?,318
+Nick Provo Farms,10/27/2020,#NAME?,159
+Gracie's Greens,10/27/2020,#NAME?,80
+Vashon-Maury Island Land Trust,10/28/2020,#NAME?,54
+Gracie's Greens,11/3/2020,#NAME?,255
+Nick Provo Farms,11/3/2020,#NAME?,90
+Vashon-Maury Island Land Trust,11/4/2020,#NAME?,213.9
+Northbourne Farm,11/9/2020,#NAME?,616.5
+Vashon-Maury Island Land Trust,11/17/2020,#NAME?,152
+Nick Provo Farms,11/20/2020,#NAME?,900
+Oxbow Farm,7/24/2020,#NAME?,NA
+Oxbow Farm,8/14/2020,#NAME?,NA
+Oxbow Farm,8/28/2020,#NAME?,NA
+21 Acres,9/2/2020,#NAME?,NA
+21 Acres,9/14/2020,10,882.5
+21 Acres,9/28/2020,50,615
+Oxbow Farms,10/2/2020,#NAME?,NA
+Sound Sustainble Farms,11/6/2020,100,226
+Oxbow Farms,11/11/2020,180,121.5
+Oxbow Farms,11/17/2020,50,1465
+Sound Sustainable Farms,11/17/2020,100,250
+Sound Sustainable Farms,11/20/2020,40,1588
+Sound Sustainable Farms,12/22/2020,150,782
+Sound Sustainable Farms,12/22/2020,2,337
+faithbeyond Farm,6/16/2020,26.25,52.5
+Oxbow Farm &Conservation Center,6/16/2020,28,28
+Rising Sign Farm,6/16/2020,37.5,75
+Steel Wheel Farm,6/16/2020,37.5,37.5
+Sound Sustainable Farms,8/6/2020,40,200
+Carnation Farms,10/14/2020,1,15
+Steel Wheel Farm,10/14/2020,60,105
+Steel Wheel Farm,6/16/2020,27,27
+Alki Farm,10/23/2020,13,30
+Rain Dog Farm,10/23/2020,8,22.5
+Steel Wheel Farm,10/23/2020,10,34.38
+Rising Sign Farm,10/28/2020,5.25,37.5
+Steel Wheel Farm,10/28/2020,5.25,121.88
+Faithbeyond Farm,10/29/2020,10.5,410
+Windy Acre Farm,NA,12,30
+Windy Acre Farm,NA,20,50
+Windy Acre Farm,8/25/2020,60,210
+Windy Acre Farm,8/31/2020,40,100
+Windy Acre Farm,NA,100,250
+Windy Acre Farm,NA,120,300
+Tangled Willows Farm,9/20/2020,#NAME?,480
+Windy Acre Farm,9/23/2020,250,500
+Windy Acre Farm,12/7/2020,200,300
+Faithbeyond Farm,11/4/2020,130,861.46
+Kamayan,11/4/2020,60,150
+Sound Sustainable Farm,11/4/2020,21,115
+Steel Wheel Farm,11/4/2020,240,940.92
+Summer Run Farm,11/4/2020,14,299
+Alki Farms,11/20/2020,35,182.29
+Carnation Farms,11/20/2020,60,260.28
+Faithbeyond Farm,11/20/2020,500,3130
+Rising Star Farm,11/20/2020,8,18.7
+Steel Wheel Farm,11/20/2020,200,790.63
+Full Circle,12/4/2020,50,655.76
+Rain Dog Farm,12/4/2020,24,771.4
+Full Circle,12/11/2020,80,1960.84
+Steel Wheel Farm,12/11/2020,100,350
+Full Circle,12/18/2020,80,368
+Sound Vegetables,12/18/2020,20,347.5
+Steel Wheel Farm,12/18/2020,170,531.25
+Summer Run Farm,12/18/2020,35,770.5
+Full Circle,12/22/2020,160,1000
+Sound Sustainable Farm,12/22/2020,180,950
+Steel Wheel Farm,12/22/2020,80,350
+Steel Wheel Farm,10/1/2020,816,721.93
+Faithbeyond Farm,10/15/2020,252,468.75
+Oxbow Farm,10/15/2020,96,92.5
+Songbird Haven,10/15/2020,24,54
+Songbird Haven,10/15/2020,24,54
+Faithbeyond Farm,10/22/2020,50,859.5
+Oxbow Farm,10/22/2020,50,75.3
+Alki Farms,10/29/2020,21,84
+Alki Farms,10/29/2020,4.38,25
+Faithbeyond Farm,10/29/2020,24,60
+Oxbow Farm,10/29/2020,24,46.25
+Rising Sign Farm,10/29/2020,24,75
+Steel Wheel Farm,10/29/2020,60,206.25
+Steel Wheel Farm,10/29/2020,100,343.75
+Steel Wheel Farm,10/29/2020,100,290
+Steel Wheel Farm,10/29/2020,120,293.75
+Faithbeyond Farm,11/5/2020,220,687.5
+Steel Wheel Farm,11/5/2020,40,112.5
+Lee's Fresh Produce,8/4/2020,576,1973
+Lee's Fresh Produce,8/6/2020,511,511
+Lee's Fresh Produce,8/11/2020,217,517
+Lee's Fresh Produce,8/25/2020,200,915
+Lee's Fresh Produce,8/27/2020,150,350
+Lee's Fresh Produce,9/1/2020,300,300
+Lee's Fresh Produce,9/2/2020,190,870
+Lee's Fresh Produce,9/8/2020,70,496
+Lee's Fresh Produce,9/10/2020,106,486
+Lee's Fresh Produce,9/15/2020,355,355
+Lee's Fresh Produce,9/22/2020,433,685
+Lee's Fresh Produce,9/29/2020,300,300
+Lee's Fresh Produce,10/2/2020,250,375
+Lee's Fresh Produce,10/6/2020,525,787.5
+Lee's Fresh Produce,10/12/2020,350,825
+Lee's Fresh Produce,10/22/2020,300,300
+Lee's Fresh Produce,10/26/2020,330,330
+Lee's Fresh Produce,11/3/2020,360,360
+21 acres,NA,#NAME?,1379
+21 acres,NA,40,1626.4
+21 Acres,12/8/2020,10,77.5
+21 Acres,12/15/2020,10,187.5
+21 Acres,12/22/2020,13,235
+Fall City Farms,NA,#NAME?,450
+Ecolibrium Farms,12/18/2021,#NAME?,4550
+Rising Sign,10/19/2020,#NAME?,195
+Songbird Haven,10/21/2020,#NAME?,176
+Rising Sign,10/26/2020,#NAME?,195
+Rising Sign,11/3/2020,#NAME?,195
+Songbird Haven,12/1/2020,#NAME?,99
+Jon the Farmer,6/3/2020,25,80
+Jon the Farmer,12/21/2021,#NAME?,445
+The Common Acre,12/18/2021,#NAME?,445
+Black Star Farmers,12/18/2021,#NAME?,444
+Carpinito,11/3/2020,375,2006
+Carpinito,11/9/2020,775,2565
+Carpinito,11/11/2020,87.5,2000
+Mosby,NA,125,NA
+Carpinito,11/15/2020,750,2485.5
+Mosby,NA,37.5,NA
+Carpinito,11/23/2020,1000,2244
+Mount Si Fungi,11/24/2020,10,293
+Carpinito,11/28/2020,6,2926.4
+?,NA,240,NA
+Mosby,NA,496,NA
+Sno Valley,11/30/2020,33,2405
+Carpinito,NA,52.5,NA
+Mosby,NA,150,NA
+NW Farms,12/7/2020,6,2887
+Carpinito,NA,368,NA
+Mosby,NA,165,NA
+Sno Valley,NA,22,NA
+NW Farms,12/14/2020,6.75,2419.6
+Mosby,NA,112.5,NA
+Carpinito,NA,138,NA
+Mount Si Fungi,NA,20,NA
+Carpinito,12/21/2020,400,2567.5
+Mosby,NA,480,NA
+NW Farms,12/23/2020,6,216
+NW Farms,12/28/2020,6,2926
+Carpinito,NA,546,NA
+Mosby,NA,202.5,NA
+Cascadia Produce,11/13/2020,800,4000
+Cascadia Produce,11/27/2020,800,4000
+Cascadia Produce,12/4/2020,500,2500
+Cascadia Produce,12/11/2020,300,150
+Mosby,11/4/2020,350,3500
+Carpinito,NA,437.5,NA
+Cascadia Produce,11/5/2020,75,300
+Cascadia Produce,11/10/2020,75,300
+Carpinito,11/21/2020,187.5,750
+Carpinito,12/3/2020,75,300
+Mosby,NA,30,NA
+NW Farms,NA,2,NA
+Carpinito,12/17/2020,75,390
+Mosby,NA,17,NA
+Carpinito,12/23/2020,75,390
+Carpinito,12/30/2020,75,395
+Mosby,NA,17,NA
+Carpinito,11/5/2020,262,1810
+Mosby,NA,271.5,NA
+Carpinito,11/9/2020,315,7200
+Mosby,NA,405,NA
+Carpinito,11/9/2020,210,4800
+Mosby,NA,480,NA
+Cascadia Produce,11/11/2020,1050,3510
+Carpinito,11/11/2020,162,3700
+Carpinito,11/11/2020,197,4500
+Cascadia Produce,11/11/2020,1800,3600
+Cascadia Produce,11/18/2020,2268,4536
+Cascadia Produce,11/24/2020,2268,4536
+Carpinito,12/1/2020,15,1200
+Mosby,NA,120,NA
+Carpinito,12/4/2020,66,1500
+Mosby,NA,150,NA
+Carpinito,12/4/2020,44,1000
+Mosby,NA,100,NA
+Sound Sustainable Farm,11/23/2020,18,211.75
+Sound Sustainable Farm,12/8/2020,4,101.6
+SnoValley Gardens,12/22/2020,5,220
+Cascadia Produce,11/24/2020,1500,9638
+"Namuna Garden, Krishna",8/19/2020,19,76
+"Namuna Garden, Krishna",8/26/2020,50,140
+"Namuna Garden, Krishna",9/2/2020,50,137.5
+"Namuna Garden, Krishna",9/23/2020,50,87.5
+"Namuna Garden, Krishna",9/30/2020,75,112.5
+"Namuna Garden, Krishna",10/14/2020,50,100
+"New Roots Farm Program, Pabi",10/14/2020,16,24
+"New Roots Farm Program, Beatrice",10/14/2020,18,26
+SnoValley Mushrooms,11/15/2020,10,80
+"New Roots Farm Program, Pabi",11/16/2020,225,125
+SnoValley Mushrooms,11/22/2020,10,82
+Cascadia Produce (Distributor),11/23/2020,75,250
+SnoValley Mushrooms,11/29/2020,10,84.75
+Cascadia Produce (Distributor),11/30/2020,15,310
+SnoValley Mushrooms,12/6/2020,10,80
+Cascadia Produce (Distributor),12/7/2020,15,300
+SnoValley Mushrooms,12/13/2020,16,131.75
+Cascadia Produce (Distributor),12/14/2020,15,300
+Cascadia Produce (Distributor),12/21/2021,11.75,470
+Rising Sign Farm,10/8/2020,10,37.5
+Steel Wheel Farm,10/8/2020,20,35
+Alki Farms,10/20/2020,8,40
+Rising Sign Farm,10/20/2020,20,75
+Sound Vegetables,10/20/2020,35,56.25
+Steel Wheel Farm,10/20/2020,30,37.5
+Farmstand Local Foods,11/11/2020,20,47.5
+Steel Wheel Farm,11/11/2020,10,65.63
+Carnation Farms,11/30/2020,20,137.18
+Steel Wheel Farm,11/30/2020,15,159.38
+Carnation Farms,9/26/2020,15,65.25
+Oxbow Farms,9/26/2020,12,145
+Carnation Farms,10/10/2020,15,29.25
+Faithbeyond Farm,10/10/2020,40,70
+Steel Wheel Farm,10/10/2020,20,70
+Rising Sign Farm,10/13/2020,30,134.5
+Carnation Farms,10/18/2020,3,66.06
+Steel Wheel Farm,10/18/2020,12,68.75
+Rising Sign Farm,10/21/2020,16,80.2
+RainDog Farm,10/24/2020,#NAME?,65
+Steel Wheel,10/24/2020,30,86.88
+Summer Run Farm,10/24/2020,2,17.5
+Rising Sign Farm,10/26/2020,32,97
+Rain Dog Farm,11/6/2020,#NAME?,12.5
+Steel Wheel farm,11/6/2020,30,108.75
+Oxbow Farm,11/15/2020,0.25,8.75
+Rain Dog Farm,11/15/2020,#NAME?,13.75
+Steel Wheel Farm,11/15/2020,20,68.75
+Summer Run Farm,11/15/2020,1,25
+Hand-Grown Greens,11/20/2020,#NAME?,7.5
+Rain Dog Farms,11/20/2020,#NAME?,19.38
+Steel Wheel Farm,11/20/2020,30,52.5
+Oxbow Farm,12/2/2020,5,185
+Carnation Farms,12/10/2020,1,14.81
+Steel Wheel Farms,12/10/2020,30,92.5
+Oxbow Farms,12/28/2020,#NAME?,900
+Sariwa Farms,9/21/2020,15,150
+Sariwa Farms,9/21/2020,1,50
+Sariwa Farms,9/21/2020,20,50
+Sariwa Farms,9/21/2020,40,100
+Sariwa Farms,10/3/2020,15,37.5
+Sariwa Farms,10/3/2020,40,100
+Sariwa Farms,10/3/2020,19,47.5
+Sariwa Farms,10/3/2020,38,95
+Sariwa Farms,10/3/2020,30,120
+Sariwa Farms,10/14/2020,16,40
+Sariwa Farms,10/14/2020,9,22.5
+Sariwa Farms,10/14/2020,15,60
+Sariwa Farms,10/14/2020,19,47.5
+Sariwa Farms,10/14/2020,18,45
+Sariwa Farms,10/14/2020,30,120
+Namuna Gardens,12/7/2020,#NAME?,1200
+Black Star Farmers,12/15/2020,4.5,270
+Black Star Farmers,12/15/2020,4.5,270
+Black Farmers Collective,12/16/2020,#NAME?,500
+Namuna Gardens,12/18/2020,#NAME?,2750
+Ecolibrium LLC.,12/18/2020,#NAME?,2750
+Local Roods,12/23/2020,#NAME?,1200
+Oxbow Farm,12/31/2020,#NAME?,1200
+Sariwa Farms,12/30/2021,#NAME?,2115
+Black Star Farmers,12/30/2021,#NAME?,160
+Stella Maris Farm,10/19/2020,#NAME?,983
+Stella Maris Farm,12/23/2020,#NAME?,153.53
+Stella Maris Farm,12/30/2020,#NAME?,500
+Plum Forest Farm,12/2/2020,#NAME?,210.5
+Stella Maris Farm,12/29/2020,#NAME?,62.97
+Plum Forest Farm,12/29/2020,#NAME?,NA
+Plum Forest Farm,12/30/2020,#NAME?,590
+Carpinto,10/23/2020,130,552.5
+Mosby,NA,65,NA
+Carpinto,10/30/2021,130,520
+Mosby,NA,65,NA
+Carpinto,11/6/2021,130,520
+Mosby,NA,65,NA
+Carpinto,11/13/2021,130,520
+Mosby,NA,65,NA
+Carpinto,11/20/2021,130,520
+Carpinto,11/27/2021,130,520
+Mosby,NA,65,NA
+Carpinto,12/11/2021,130,650
+Mosby,NA,40.6,NA
+Carpinto,12/18/2021,130,650
+Mosby,NA,40.6,NA
+Carpinto,12/11/2021,50,265.5
+Rockridge Orchards,NA,80,NA
+NW Farms,NA,0.5,NA
+Mosby,NA,15,NA
+Carpinto,12/18/2021,110,550
+Mosby,NA,34,NA
+Mosby,12/31/2021,50,631.91
+Carpinto,NA,80,NA

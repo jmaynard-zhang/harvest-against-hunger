@@ -27,9 +27,9 @@ funds <- read_csv("Data/funds_dataframe.csv")
 
 # -- Order amount ($) --
 `Order Amount ($) Monthly` <- df %>%
-  select(order_date, Order.Amount) %>%
+  select(order_date, order_amount) %>%
   group_by(order_date) %>%
-  summarize(`Total Order Amount ($)` = sum(Order.Amount, na.rm = T)) %>%
+  summarize(`Total Order Amount ($)` = sum(order_amount, na.rm = T)) %>%
   mutate(cumulative = cumsum(`Total Order Amount ($)`)) %>%
   na.omit()
 
@@ -81,9 +81,9 @@ df_map <- df %>%
 
 # -- Total Order Amount ($) --
 `Total Order Amount ($)` <- df_map %>%
-  select(farm_name, Order.Amount, lat, lon) %>%
+  select(farm_name, order_amount, lat, lon) %>%
   group_by(farm_name, lat, lon) %>%
-  summarize(total = sum(Order.Amount, na.rm = T)) %>%
+  summarize(total = sum(order_amount, na.rm = T)) %>%
   na.omit()
 
 
