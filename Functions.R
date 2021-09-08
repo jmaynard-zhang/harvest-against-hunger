@@ -132,49 +132,62 @@ consistent_date <- function(df_list) {
   return(df_list)
 }
 
-# Returns a dataframe, where a given character type column is prepared to be
-# evaluable in excel (for fixing pounds purchased).
+# Returns a dataframe, where the pounds purchased column is prepared to be
+# evaluable in excel (for fixing pounds purchased). COLUMN MUST BE NAMED
+# `pounds_purchased`.
 #
 # df = dataframe
-# col = column
-# fix_lbs_purchased <- function(df, col) {
-#   df <- strip_unnecessary(df, col)
+fix_lbs_purchased <- function(df) {
+  df <- strip_unnecessary(df)
+
+  df <- non_num_to_plus(df)
+
+  return(df)
+}
+
+# Removes unnecessary numbers by removing everything after the '=', '(', and
+# '$' signs (inclusive).
 #
-#   df <- non_num_to_plus(df, col)
+# df = dataframe
+strip_unnecessary <- function(df) {
+  # remove <- "\\(.*|=.*|\\$.*| +$"
+  #
+  # df <- df %>%
+  #   mutate(pounds_purchased=gsub(pattern=remove,
+  #                                  replacement = "",
+  #                                  df$pounds_purchased))
+  remove <- "\\(.*|=.*|\\$.*| +$"
+  return <- df %>%
+    mutate(pounds_purchased=gsub(pattern=remove,
+                                 replacement = "",
+                                 df$pounds_purchased))
+
+  return(return)
+}
+
+# Replaces characters between numbers with a single '+'.
 #
-#   return(df)
-# }
-#
-# # Remove unnecessary numbers by removing everything after the '=', '(', and
-# # '$' signs (inclusive).
-# #
-# # df = dataframe
-# # col = column
-# strip_unnecessary <- function(df, col) {
-#   remove <- "\\(.*|=.*|\\$.*| +$"
-#
-#   df <- df %>%
-#     mutate(pounds_purchased=gsub(pattern=remove,
-#                                    replacement = "",
-#                                    df$pounds_purchased))
-#
-#   return(df)
-# }
-#
-# # Replace non-numbers with spaces
-# remove2 <- "[^0-9.-]"
-# df_fix_lbs <- df_fix_lbs %>%
-#   mutate(`Pounds purchased`=gsub(pattern=remove2,
-#                                  replacement = " ",
-#                                  df_fix_lbs$`Pounds purchased`))
-# # Trim whitespace
-# df_fix_lbs <- df_fix_lbs %>%
-#   mutate(`Pounds purchased`=str_trim(str_squish(df_fix_lbs$`Pounds purchased`)))
-# # Replace spaces with `+`
-# df_fix_lbs <- df_fix_lbs %>%
-#   mutate(`Pounds purchased`=gsub(pattern=" ",
-#                                  replacement="+",
-#                                  df_fix_lbs$`Pounds purchased`))
+# df = dataframe
+non_num_to_plus <- function(df) {
+  # Replace non-numbers with spaces
+  remove <- "[^0-9.-]"
+  df <- df %>%
+    mutate(pounds_purchased=gsub(pattern=remove,
+                                   replacement = " ",
+                                   df$pounds_purchased))
+
+  # Trim whitespace
+  df <- df %>%
+    mutate(pounds_purchased=str_trim(str_squish(df$pounds_purchased)))
+
+  # Replace spaces with `+`
+  df <- df %>%
+    mutate(pounds_purchased=gsub(pattern=" ",
+                                   replacement="+",
+                                   df$pounds_purchased))
+
+  return(df)
+}
 
 # Returns a dataframe, removing all characters after the '=', '(', and '$' signs
 # (inclusive) from a given character type column.

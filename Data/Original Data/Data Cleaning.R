@@ -103,11 +103,11 @@ funds <- read_excel("./Data/Original Data/KCFS $.xlsx") %>%
 # # -- Fixing `Pounds purchased` --
 # # Remove unnecessary numbers by removing everything after the '=', '(', and
 # # '$' signs (inclusive)
-# remove <- "\\(.*|=.*|\\$.*| +$"
-# df_fix_lbs <- df %>%
-#   mutate(`Pounds purchased`=gsub(pattern=remove,
-#                                  replacement = "",
-#                                  df$`Pounds purchased`))
+remove <- "\\(.*|=.*|\\$.*| +$"
+df_fix_lbs <- df %>%
+  mutate(pounds_purchased=gsub(pattern=remove,
+                                 replacement = "",
+                                 df$pounds_purchased))
 # # Extract the first number of each cell
 # df <- df %>%
 #   mutate(`Pounds purchased`=stri_extract_first_regex(`Pounds purchased`,
