@@ -23,8 +23,8 @@ line_panel <- tabPanel(
   ),
   mainPanel(
     plotlyOutput("line"),
-    credits
-  )
+  ),
+  credits
 )
 
 # Vis 2 - Map
@@ -54,9 +54,9 @@ map_panel <- tabPanel(
     map_shape_select
   ),
   mainPanel(
-    plotlyOutput("map"),
-    credits
-  )
+    plotlyOutput("map")
+  ),
+  credits
 )
 
 # UI
