@@ -103,11 +103,11 @@ funds <- read_excel("./Data/Original Data/KCFS $.xlsx") %>%
 # # -- Fixing `Pounds purchased` --
 # # Remove unnecessary numbers by removing everything after the '=', '(', and
 # # '$' signs (inclusive)
-remove <- "\\(.*|=.*|\\$.*| +$"
-df_fix_lbs <- df %>%
-  mutate(pounds_purchased=gsub(pattern=remove,
-                                 replacement = "",
-                                 df$pounds_purchased))
+# remove <- "\\(.*|=.*|\\$.*| +$"
+# df_fix_lbs <- df %>%
+#   mutate(pounds_purchased=gsub(pattern=remove,
+#                                  replacement = "",
+#                                  df$pounds_purchased))
 # # Extract the first number of each cell
 # df <- df %>%
 #   mutate(`Pounds purchased`=stri_extract_first_regex(`Pounds purchased`,
@@ -149,19 +149,19 @@ df_fix_lbs <- df %>%
 #           "Data/Original Data/misspelled_farm_names.csv",
 #           row.names=F)
 #
-# correct_farms <- read.csv("./Data/Original Data/correct_farm_names.csv")
-#
-# # Join main df with fixed farm names
-# df <- df %>%
-#   left_join(correct_farms)
-#
-# # Remove the old farm names column
-# df <- df %>%
-#   select(-Farm.Name)
-#
-# # Rename fixed farm names column to "Farm.Name"
-# df <- df %>%
-#   rename(Farm.Name="Correct.Farm.Name")
+correct_farms <- read.csv("./Data/Original Data/correct_farm_names.csv")
+
+# Join main df with fixed farm names
+df <- df %>%
+  left_join(correct_farms)
+
+# Remove the old farm names column
+df <- df %>%
+  select(-farm_name)
+
+# Rename fixed farm names column to "Farm.Name"
+df <- df %>%
+  rename(farm_name="correct_farm_name")
 #
 #
 # # -- Add coords to the df --

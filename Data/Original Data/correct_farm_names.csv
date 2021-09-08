@@ -1,4 +1,4 @@
-Farm.Name,Correct.Farm.Name
+farm_name,correct_farm_name
 "
 Cascadia Greens",Cascadia Greens
 ?,Unknown
@@ -12,8 +12,8 @@ Ayeko Farms,Black Farmers Collective
 Black Farmers Collective,Black Star Farmers
 Black Star Farmers,Black Star Farmers
 Carnation Farms,Carnation Farms
-Carpinito,Carpinto
-Carpinto,Carpinto
+Carpinito,Carpinito Farm
+Carpinto,Carpinito Farm
 Caruso Farm,Caruso Farm
 Cascadia Produce,Cascadia Produce (Distributor)
 Cascadia Produce (Distributor),Cascadia Produce (Distributor)
@@ -54,7 +54,7 @@ Local Roots,Local Roots Farm
 Local Roots Farm,Local Roots Farm
 Lowlands Farm,Lowlands Farm
 Matsuda Farm,Matsuda Farm
-Mosby,Mosby
+Mosby,Mosby Farm
 Mount Si Fungi,Mount Si Fungi
 Namuna Garden,Namuna Garden
 "Namuna Garden, Krishna",Namuna Garden
@@ -94,7 +94,7 @@ Sno-Valley Mushrooms,Sno-Valley Mushrooms
 Sno Valley,Sno-Valley Mushrooms
 SnoValley Gardens,SnoValley Gardens
 SnoValley Mushrooms,Sno-Valley Mushrooms
-Songbird Haven,Songbird Haven
+Songbird Haven,Songbird Haven Farm
 Sound Sustainable Farm,Sound Sustainable Farms
 Sound Sustainable Farms,Sound Sustainable Farms
 Sound Sustainble Farms,Sound Sustainable Farms
@@ -110,8 +110,8 @@ Tangled Willows Farm,Tangled Willows Farm
 Terrbonne Truck Patch,Terrebonne Truck Patch
 Terrebonne Truck Patch,Terrebonne Truck Patch
 The Common Acre,The Common Acre
-Tonnemaker,Tonnemaker
-Tonnemaker Hill Farm*,Tonnemaker
+Tonnemaker,Tonnemaker Farm Valley
+Tonnemaker Hill Farm*,Tonnemaker Farm Valley
 Tualco Valley Farm,Tualco Valley Farm
 Vashon-Maury Island Land Trust,Matsuda Farm
 Wild Canary,Wild Canary Farm
