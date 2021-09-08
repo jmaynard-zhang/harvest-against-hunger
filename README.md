@@ -1,5 +1,5 @@
 # harvest-against-hunger
-The objective of this project is to bring visibility to Harvest Against Hunger, a non-profit hunger relief organization.
+The objective of this project is to bring visibility to [Harvest Against Hunger](https://www.harvestagainsthunger.org/), a non-profit hunger relief organization.
 
 Specifically, through interactive data visualizations, this project will showcase the impact of its King County Farmers Share program. The visualizations will primarily consist of geographical and change-over-time data. These will also provide this organization a scalable template to showcase future programs.
 
