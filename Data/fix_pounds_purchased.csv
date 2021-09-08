@@ -1,4 +1,4 @@
-Farm Name,Order Date,Pounds Purchased,Order Amount ($)
+Farm Name,Order Date,Pounds purchased,Order Amount ($)
 Northbourne Farm,6/13/2019,20,160
 Forest Garden Farm,7/2/2019,10,80
 Matsuda Farm,7/11/2019,90,270
@@ -468,6 +468,155 @@ Steel Wheel Farm,10/23/2020,10,34.38
 Rising Sign Farm,10/28/2020,5.25,37.5
 Steel Wheel Farm,10/28/2020,5.25,121.88
 Faithbeyond Farm,10/29/2020,10.5,410
+Windy Acre Farm,NA,12,30
+Windy Acre Farm,NA,20,50
+Windy Acre Farm,8/25/2020,60,210
+Windy Acre Farm,8/31/2020,40,100
+Windy Acre Farm,NA,100,250
+Windy Acre Farm,NA,120,300
+Tangled Willows Farm,9/20/2020,#NAME?,480
+Windy Acre Farm,9/23/2020,250,500
+Windy Acre Farm,12/7/2020,200,300
+Faithbeyond Farm,11/4/2020,130,861.46
+Kamayan,11/4/2020,60,150
+Sound Sustainable Farm,11/4/2020,21,115
+Steel Wheel Farm,11/4/2020,240,940.92
+Summer Run Farm,11/4/2020,14,299
+Alki Farms,11/20/2020,35,182.29
+Carnation Farms,11/20/2020,60,260.28
+Faithbeyond Farm,11/20/2020,500,3130
+Rising Star Farm,11/20/2020,8,18.7
+Steel Wheel Farm,11/20/2020,200,790.63
+Full Circle,12/4/2020,50,655.76
+Rain Dog Farm,12/4/2020,24,771.4
+Full Circle,12/11/2020,80,1960.84
+Steel Wheel Farm,12/11/2020,100,350
+Full Circle,12/18/2020,80,368
+Sound Vegetables,12/18/2020,20,347.5
+Steel Wheel Farm,12/18/2020,170,531.25
+Summer Run Farm,12/18/2020,35,770.5
+Full Circle,12/22/2020,160,1000
+Sound Sustainable Farm,12/22/2020,180,950
+Steel Wheel Farm,12/22/2020,80,350
+Steel Wheel Farm,10/1/2020,816,721.93
+Faithbeyond Farm,10/15/2020,252,468.75
+Oxbow Farm,10/15/2020,96,92.5
+Songbird Haven,10/15/2020,24,54
+Songbird Haven,10/15/2020,24,54
+Faithbeyond Farm,10/22/2020,50,859.5
+Oxbow Farm,10/22/2020,50,75.3
+Alki Farms,10/29/2020,21,84
+Alki Farms,10/29/2020,4.38,25
+Faithbeyond Farm,10/29/2020,24,60
+Oxbow Farm,10/29/2020,24,46.25
+Rising Sign Farm,10/29/2020,24,75
+Steel Wheel Farm,10/29/2020,60,206.25
+Steel Wheel Farm,10/29/2020,100,343.75
+Steel Wheel Farm,10/29/2020,100,290
+Steel Wheel Farm,10/29/2020,120,293.75
+Faithbeyond Farm,11/5/2020,220,687.5
+Steel Wheel Farm,11/5/2020,40,112.5
+Lee's Fresh Produce,8/4/2020,576,1973
+Lee's Fresh Produce,8/6/2020,511,511
+Lee's Fresh Produce,8/11/2020,217,517
+Lee's Fresh Produce,8/25/2020,200,915
+Lee's Fresh Produce,8/27/2020,150,350
+Lee's Fresh Produce,9/1/2020,300,300
+Lee's Fresh Produce,9/2/2020,190,870
+Lee's Fresh Produce,9/8/2020,70,496
+Lee's Fresh Produce,9/10/2020,106,486
+Lee's Fresh Produce,9/15/2020,355,355
+Lee's Fresh Produce,9/22/2020,433,685
+Lee's Fresh Produce,9/29/2020,300,300
+Lee's Fresh Produce,10/2/2020,250,375
+Lee's Fresh Produce,10/6/2020,525,787.5
+Lee's Fresh Produce,10/12/2020,350,825
+Lee's Fresh Produce,10/22/2020,300,300
+Lee's Fresh Produce,10/26/2020,330,330
+Lee's Fresh Produce,11/3/2020,360,360
+21 acres,NA,#NAME?,1379
+21 acres,NA,40,1626.4
+21 Acres,12/8/2020,10,77.5
+21 Acres,12/15/2020,10,187.5
+21 Acres,12/22/2020,13,235
+Fall City Farms,NA,#NAME?,450
+Ecolibrium Farms,12/18/2021,#NAME?,4550
+Rising Sign,10/19/2020,#NAME?,195
+Songbird Haven,10/21/2020,#NAME?,176
+Rising Sign,10/26/2020,#NAME?,195
+Rising Sign,11/3/2020,#NAME?,195
+Songbird Haven,12/1/2020,#NAME?,99
+Jon the Farmer,6/3/2020,25,80
+Jon the Farmer,12/21/2021,#NAME?,445
+The Common Acre,12/18/2021,#NAME?,445
+Black Star Farmers,12/18/2021,#NAME?,444
+Carpinito,11/3/2020,375,2006
+Carpinito,11/9/2020,775,2565
+Carpinito,11/11/2020,87.5,2000
+Mosby,NA,125,NA
+Carpinito,11/15/2020,750,2485.5
+Mosby,NA,37.5,NA
+Carpinito,11/23/2020,1000,2244
+Mount Si Fungi,11/24/2020,10,293
+Carpinito,11/28/2020,6,2926.4
+?,NA,240,NA
+Mosby,NA,496,NA
+Sno Valley,11/30/2020,33,2405
+Carpinito,NA,52.5,NA
+Mosby,NA,150,NA
+NW Farms,12/7/2020,6,2887
+Carpinito,NA,368,NA
+Mosby,NA,165,NA
+Sno Valley,NA,22,NA
+NW Farms,12/14/2020,6.75,2419.6
+Mosby,NA,112.5,NA
+Carpinito,NA,138,NA
+Mount Si Fungi,NA,20,NA
+Carpinito,12/21/2020,400,2567.5
+Mosby,NA,480,NA
+NW Farms,12/23/2020,6,216
+NW Farms,12/28/2020,6,2926
+Carpinito,NA,546,NA
+Mosby,NA,202.5,NA
+Cascadia Produce,11/13/2020,800,4000
+Cascadia Produce,11/27/2020,800,4000
+Cascadia Produce,12/4/2020,500,2500
+Cascadia Produce,12/11/2020,300,150
+Mosby,11/4/2020,350,3500
+Carpinito,NA,437.5,NA
+Cascadia Produce,11/5/2020,75,300
+Cascadia Produce,11/10/2020,75,300
+Carpinito,11/21/2020,187.5,750
+Carpinito,12/3/2020,75,300
+Mosby,NA,30,NA
+NW Farms,NA,2,NA
+Carpinito,12/17/2020,75,390
+Mosby,NA,17,NA
+Carpinito,12/23/2020,75,390
+Carpinito,12/30/2020,75,395
+Mosby,NA,17,NA
+Carpinito,11/5/2020,262,1810
+Mosby,NA,271.5,NA
+Carpinito,11/9/2020,315,7200
+Mosby,NA,405,NA
+Carpinito,11/9/2020,210,4800
+Mosby,NA,480,NA
+Cascadia Produce,11/11/2020,1050,3510
+Carpinito,11/11/2020,162,3700
+Carpinito,11/11/2020,197,4500
+Cascadia Produce,11/11/2020,1800,3600
+Cascadia Produce,11/18/2020,2268,4536
+Cascadia Produce,11/24/2020,2268,4536
+Carpinito,12/1/2020,15,1200
+Mosby,NA,120,NA
+Carpinito,12/4/2020,66,1500
+Mosby,NA,150,NA
+Carpinito,12/4/2020,44,1000
+Mosby,NA,100,NA
+Sound Sustainable Farm,11/23/2020,18,211.75
+Sound Sustainable Farm,12/8/2020,4,101.6
+SnoValley Gardens,12/22/2020,5,220
+Cascadia Produce,11/24/2020,1500,9638
 "Namuna Garden, Krishna",8/19/2020,19,76
 "Namuna Garden, Krishna",8/26/2020,50,140
 "Namuna Garden, Krishna",9/2/2020,50,137.5

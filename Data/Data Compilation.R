@@ -57,12 +57,14 @@ kingco <- readOGR(dsn="Data/kingco_shapefile/King_County_with_Natural_Shoreline_
 wa <- map_data("county", "washington")
 
 # Remove farms with locations that are a) unknown or b) outside of King county.
-remove_farms <- c("Lily Fields",
+remove_farms <- c("Unknown",
+                  "Lily Fields",
                   "High & Dry Farm",
                   "Orange Star Farm",
                   "Caruso Farm",
                   "Skylight Farms",
-                  "Lowlands Farm")
+                  "Lowlands Farm",
+                  "Tangled Willows Farm")
 df_map <- df %>%
   filter(!(Farm.Name %in% remove_farms))
 
