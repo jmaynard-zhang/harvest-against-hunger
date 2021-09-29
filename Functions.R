@@ -215,7 +215,7 @@ sep_coords <- function(df) {
 # df = dataframe
 get_order_month <- function(df) {
   df <- df %>%
-    mutate(order_month=lubridate::floor_date(order_date, "month"))
+    mutate(order_date=lubridate::floor_date(order_date, "month"))
 
   return(df)
 }
